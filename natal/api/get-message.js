@@ -149,7 +149,7 @@ Com carinho,
 Henry`
     },
 
-    "Luiz": {
+    "luiz": {
         poema:"",
         carta:`Luiz
 
@@ -164,7 +164,7 @@ Henry`
     },
 
 
-  "Higor": {
+  "higor": {
     poema: "",
     carta: `
 Higor,
@@ -178,7 +178,7 @@ Henry
 `
   },
 
-  "Alexandre": {
+  "alexandre": {
     poema: "",
     carta: `
 Alexandre,
@@ -192,7 +192,7 @@ Henry
 `
   },
 
-  "Henrique": {
+  "henrique": {
     poema: "",
     carta: `
 Henrique,
@@ -206,7 +206,7 @@ Henry
 `
   },
 
-  "Gabriel C": {
+  "gabriel c": {
     poema: "",
     carta: `
 Gabrie C
@@ -220,7 +220,7 @@ Henry
 `
   },
 
-  "Gabriel H": {
+  "gabriel h": {
     poema: "",
     carta: `
 Gabriel H
@@ -234,7 +234,7 @@ Henry
 `
   },
 
-  "Mariane": {
+  "mariane": {
     poema: "",
     carta: `
 Mariani,
@@ -248,7 +248,7 @@ Henry
 `
   },
 
-  "Milena": {
+  "milena": {
     poema: "",
     carta: `
 Milena
