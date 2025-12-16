@@ -148,6 +148,22 @@ Te desejo um Natal cheio de paz, alegria e momentos bons, e que o próximo ano v
 Com carinho,
 Henry`
     },
+
+    "Luiz": {
+        poema:"",
+        carta:`Luiz
+
+Quero aproveitar este Natal para te agradecer de verdade pelos conselhos valiosos que você já me deu. Mesmo que muitas vezes não pareça, eu sei que você se importa, e isso significa muito pra mim.
+
+Suas palavras e atitudes me ajudaram a refletir, a crescer e a enxergar as coisas de outra forma. Sou grato por tudo o que você já fez e faz por mim, mesmo nos detalhes e nos momentos mais silenciosos.
+
+Te desejo um Natal cheio de paz e um próximo ano com saúde, tranquilidade e coisas boas. Muito obrigado por tudo.
+
+Com respeito e carinho
+Henry`
+    },
+
+    
     
     // MENSAGEM PADRÃO (Sempre a última para ser usada se o nome não for encontrado)
     "padrao": {
