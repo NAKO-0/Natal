@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Natal!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="neve-container"></div>
+
+    <div class="container">
+        <div id="tela-inicial">
+            <h1>Ho Ho Ho!</h1>
+            <p>Digite seu nome para receber sua mensagem especial:</p>
+            <form id="form-nome">
+                <input type="text" id="nome-input" placeholder="Seu nome aqui...">
+                <button type="submit">Ver Mensagem</button>
+            </form>
+            <p id="erro-msg" class="oculto">Por favor, digite um nome!</p>
+        </div>
+
+        <div id="tela-carta" class="oculto">
+         <div class="envelope">
+                <h2 id="titulo-mensagem">Feliz Natal!</h2>
+                
+                <div class="tabs">
+                    <button class="tab-button ativo" onclick="alternarAba('carta')">Carta</button>
+                    <button class="tab-button" onclick="alternarAba('poema')">Poema</button>
+                </div>
+
+                <div id="aba-carta" class="conteudo-aba aba-ativa">
+                    <h3>Uma carta de Henry para você:</h3>
+                    <p id="texto-carta" class="texto-conteudo">...</p>
+                </div>
+
+                <div id="aba-poema" class="conteudo-aba">
+                    <h3>Um Poema para Você:</h3>
+                    <p id="texto-poema" class="texto-conteudo">...</p>
+                </div>
+                
+                <button onclick="voltar()" class="btn-voltar">Voltar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="mensagens.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
