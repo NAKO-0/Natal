@@ -130,17 +130,17 @@ Com todo o meu carinho
 Henry`
 },
 
-"neide": {
+"juliana": {
     poema:"",
-    carta:`Vó
+    carta:`Tia
 
-Quero aproveitar este Natal para te agradecer por tudo o que você faz por mim. Você sempre me ajuda nas coisas que eu faço, mesmo quando eu sou um pouco rebelde. Seu apoio, sua paciência e seu cuidado significam muito mais do que eu consigo explicar.
+Quero aproveitar este Natal pra te dizer o quanto você é importante pra mim. Você é minha tia e minha madrinha de nascimento, alguém que sempre esteve presente na minha vida, mesmo quando você fica chata de vez em quando — o que não muda em nada o quanto eu te amo.
 
-Ter você na minha vida é uma bênção. Seu carinho, seus conselhos e a forma como você sempre está presente me dão força e segurança. Sou muito grato por tudo o que você representa pra mim.
+Seu cuidado, seus conselhos e sua presença sempre fizeram diferença. Sei que posso contar com você, e isso é algo que eu valorizo muito.
 
-Te desejo um Natal cheio de paz, amor e saúde, e que o próximo ano venha com muitos momentos felizes. Obrigado por tudo. Eu te amo.
+Te desejo um Natal cheio de paz, alegria e momentos bons, e que o próximo ano venha com saúde, felicidade e muitas bênçãos. Obrigado por tudo e por sempre estar por perto.
 
-Com todo o meu carinho
+Com carinho,
 Henry`
 },
 
