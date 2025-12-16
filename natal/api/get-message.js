@@ -163,7 +163,108 @@ Com respeito e carinho
 Henry`
     },
 
-    
+
+  "Higor": {
+    poema: "",
+    carta: `
+Higor,
+
+Quero te agradecer por ser esse amigo tão especial. Sua presença sempre trouxe leveza, risadas e momentos bons que fizeram diferença no meu dia a dia.
+
+Nossa amizade é simples, sincera e verdadeira, e isso é algo que eu valorizo muito. Te desejo um Natal tranquilo e um próximo ano cheio de conquistas e felicidade.
+
+Com carinho,
+Henry
+`
+  },
+
+  "Alexandre": {
+    poema: "",
+    carta: `
+Alexandre,
+
+Quero aproveitar este Natal pra te agradecer pela amizade sincera. Você é alguém em quem dá pra confiar, conversar e contar quando precisa.
+
+Que o próximo ano venha com crescimento, sucesso e coisas boas pra você. Obrigado por ser um amigo de verdade.
+
+Com carinho,
+Henry
+`
+  },
+
+  "Henrique": {
+    poema: "",
+    carta: `
+Henrique,
+
+Nossa amizade foi construída aos poucos, em momentos simples, mas isso não diminui o quanto ela é importante pra mim.
+
+Te desejo um Natal tranquilo e um ano novo cheio de oportunidades, aprendizado e boas surpresas.
+
+Com carinho,
+Henry
+`
+  },
+
+  "Gabriel C": {
+    poema: "",
+    carta: `
+Gabrie C
+
+Quero te agradecer pela amizade e pelos momentos compartilhados. Seu jeito leve torna tudo mais fácil e mais divertido.
+
+Que este Natal seja de paz e que o próximo ano venha com felicidade e crescimento.
+
+Com carinho,
+Henry
+`
+  },
+
+  "Gabriel H": {
+    poema: "",
+    carta: `
+Gabriel H
+
+Valorizo muito nossa amizade e tudo o que já vivemos juntos. Sua presença e suas ideias fizeram diferença em vários momentos.
+
+Te desejo um Natal tranquilo e um próximo ano cheio de conquistas e boas experiências.
+
+Com carinho,
+Henry
+`
+  },
+
+  "Mariane": {
+    poema: "",
+    carta: `
+Mariani,
+
+Quero te agradecer por ser essa pessoa tão especial. Seu jeito e sua energia tornam qualquer ambiente melhor.
+
+Que este Natal seja leve e que o próximo ano venha com alegria, conquistas e coisas boas pra você.
+
+Com carinho,
+Henry
+`
+  },
+
+  "Milena": {
+    poema: "",
+    carta: `
+Milena
+
+Obrigado pela amizade e pelos momentos compartilhados. Seu jeito de ser e sua atenção mostram o quanto você é uma pessoa especial.
+
+Te desejo um Natal cheio de luz e um ano novo com felicidade e sonhos se realizando.
+
+Com carinho,\
+Henry
+`
+  },
+
+
+
+
     
     // MENSAGEM PADRÃO (Sempre a última para ser usada se o nome não for encontrado)
     "padrao": {
