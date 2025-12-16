@@ -1,18 +1,16 @@
 /* ================================================================
   FUNÇÃO DE CAPITALIZAÇÃO
-  ================================================================
   Garante que a primeira letra do nome seja maiúscula (ex: "maria" vira "Maria").
+  ================================================================
 */
 function capitalizarPrimeiraLetra(string) {
     if (!string) return string;
-    // O .slice(1) transforma o resto da palavra em minúsculas
     return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
 }
 
 
 /* ================================================================
-  LÓGICA DO SITE
-  Nota: A lista 'mensagensEspeciais' é carregada do arquivo mensagens.js
+  LÓGICA PRINCIPAL DO SITE
   ================================================================
 */
 
@@ -22,6 +20,7 @@ document.getElementById('form-nome').addEventListener('submit', function(event) 
     abrirPresente();
 });
 
+// A função de busca deve ser assíncrona (async)
 async function abrirPresente() {
     const inputNome = document.getElementById('nome-input').value;
     
@@ -30,32 +29,35 @@ async function abrirPresente() {
         return;
     }
 
-    // Nome para BUSCAR (minúsculo e sem acento)
+    // 1. Nome para BUSCAR (minúsculo e sem acento)
     const nomeBusca = inputNome.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
 
-    // Nome para EXIBIR (primeira letra maiúscula)
+    // 2. Nome para EXIBIR (primeira letra maiúscula)
     const nomeExibido = capitalizarPrimeiraLetra(inputNome.trim());
 
     // ====================================================================
-    // NOVIDADE: BUSCA SEGURA OS DADOS DO SERVIDOR (Serverless Function)
+    // BUSCA SEGURA OS DADOS DO SERVIDOR (Serverless Function)
     // ====================================================================
     try {
+        // Faz a requisição para a rota que o Vercel cria automaticamente
         const urlBusca = `/api/get-message?name=${encodeURIComponent(nomeBusca)}`;
         
         const resposta = await fetch(urlBusca);
+        
         if (!resposta.ok) {
             throw new Error(`Erro de rede ao buscar a mensagem: ${resposta.status}`);
         }
         
         const dados = await resposta.json();
-        const conteudo = dados.data; // Pega o conteúdo do servidor
+        // O servidor envia o conteúdo dentro da chave 'data'
+        const conteudo = dados.data; 
         
-        // 4. Exibe os textos
+        // 3. Exibe os textos
         document.getElementById('titulo-mensagem').innerText = `Feliz Natal, ${nomeExibido}!`;
         document.getElementById('texto-poema').innerText = conteudo.poema;
         document.getElementById('texto-carta').innerText = conteudo.carta;
 
-        // 5. Troca as telas
+        // 4. Troca as telas
         document.getElementById('tela-inicial').classList.add('oculto');
         document.getElementById('tela-carta').classList.remove('oculto');
         
@@ -63,7 +65,7 @@ async function abrirPresente() {
 
     } catch (error) {
         console.error("Falha ao carregar a mensagem:", error);
-        alert("Ops! Houve um erro ao buscar a mensagem. Tente novamente.");
+        alert("Ops! Houve um erro ao buscar a mensagem. Verifique a conexão.");
     }
 }
 
@@ -83,7 +85,7 @@ function alternarAba(nomeAba) {
 function voltar() {
     document.getElementById('tela-carta').classList.add('oculto');
     document.getElementById('tela-inicial').classList.remove('oculto');
-    document.getElementById('nome-input').value = ""; // Limpa o input
+    document.getElementById('nome-input').value = ""; 
     document.getElementById('erro-msg').classList.add('oculto');
 }
 

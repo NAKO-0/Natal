@@ -1,8 +1,13 @@
 /* ================================================================
-  ÁREA DE EDIÇÃO - ADICIONE SEUS AMIGOS AQUI
+  ARQUIVO SECRETO E SEGURO (Serverless Function)
+  O Vercel executa este código no servidor, longe dos olhos do usuário.
   ================================================================
 */
+
+// Sua lista de mensagens agora fica AQUI, oculta para o público.
+// CHAVES DOS NOMES DEVEM SER SEM ACENTO E EM MINÚSCULO!
 const mensagensEspeciais = {
+    // A lista completa que você forneceu:
     "gabrielle": {
         poema: "As luzes brilham lá fora,\nMas sua amizade brilha mais,\nQue neste Natal, sem demora,\nVocê encontre sua paz.",
         carta: `Gabrielle
@@ -52,7 +57,7 @@ Com carinho
 Henry`
     },
 
-     "daniel": {
+    "daniel": {
         poema: "O Natal chegou com alegria,\nTrazendo paz e harmonia,\nQue seu dia seja magia,\nCheio de luz e fantasia.",
         carta: `Daniel
 
@@ -68,11 +73,11 @@ Com carinho
 Henry`
     },
 
-     "julia": {
+    "julia": {
         poema: "O Natal chegou com alegria,\nTrazendo paz e harmonia,\nQue seu dia seja magia,\nCheio de luz e fantasia.",
         carta: `Julia
 
-        Quero te agradecer por ser uma amiga tão divertida e especial. Seu jeito leve e espontâneo sempre trouxe risadas, mas também trouxe algo muito valioso: conselhos duros quando precisavam ser ditos, sempre verdadeiros e necessários.
+Quero te agradecer por ser uma amiga tão divertida e especial. Seu jeito leve e espontâneo sempre trouxe risadas, mas também trouxe algo muito valioso: conselhos duros quando precisavam ser ditos, sempre verdadeiros e necessários.
 
 Mesmo quando não foi fácil ouvir, seus conselhos fizeram diferença e mostraram o quanto você se importa de verdade. Isso é algo raro e que eu valorizo muito.
 
@@ -84,7 +89,7 @@ Com carinho
 Henry`
     },
 
-        "alexia": {
+    "alexia": {
         poema: "O Natal chegou com alegria,\nTrazendo paz e harmonia,\nQue seu dia seja magia,\nCheio de luz e fantasia.",
         carta: `Alexia
 
@@ -116,9 +121,9 @@ Com todo o meu amor
 Henry`
     },
 
-"neide": {
-    poema:"",
-    carta:`Vó
+    "neide": {
+        poema:"",
+        carta:`Vó
 
 Quero aproveitar este Natal para te agradecer por tudo o que você faz por mim. Você sempre me ajuda nas coisas que eu faço, mesmo quando eu sou um pouco rebelde. Seu apoio, sua paciência e seu cuidado significam muito mais do que eu consigo explicar.
 
@@ -128,11 +133,11 @@ Te desejo um Natal cheio de paz, amor e saúde, e que o próximo ano venha com m
 
 Com todo o meu carinho
 Henry`
-},
+    },
 
-"juliana": {
-    poema:"",
-    carta:`Tia
+    "juliana": {
+        poema:"",
+        carta:`Tia
 
 Quero aproveitar este Natal pra te dizer o quanto você é importante pra mim. Você é minha tia e minha madrinha de nascimento, alguém que sempre esteve presente na minha vida, mesmo quando você fica chata de vez em quando — o que não muda em nada o quanto eu te amo.
 
@@ -142,8 +147,27 @@ Te desejo um Natal cheio de paz, alegria e momentos bons, e que o próximo ano v
 
 Com carinho,
 Henry`
-},
+    },
+    
+    // MENSAGEM PADRÃO (Sempre a última para ser usada se o nome não for encontrado)
+    "padrao": {
+        poema: "O Natal chegou com alegria,\nTrazendo paz e harmonia,\nQue seu dia seja magia,\nCheio de luz e fantasia.",
+        carta: "Desejo a você um Feliz Natal repleto de amor, saúde e felicidade! Que o próximo ano seja incrível."
+    }
 
+};
 
+// Esta é a função que o Vercel executa quando o navegador requisita /api/get-message
 
+module.exports = (req, res) => {
+    // 1. Pega o nome do usuário enviado na requisição (query parameter 'name')
+    const nomeBusca = req.query.name; 
+
+    // 2. Busca o conteúdo. Se o nome não existir, usa o padrão.
+    let conteudo = mensagensEspeciais[nomeBusca] || mensagensEspeciais["padrao"];
+
+    // 3. Envia a resposta (apenas a mensagem)
+    res.status(200).json({
+        data: conteudo
+    });
 };
