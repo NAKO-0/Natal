@@ -237,7 +237,7 @@ Henry
   "mariane": {
     poema: "",
     carta: `
-Mariani,
+Mariane
 
 Quero te agradecer por ser essa pessoa tão especial. Seu jeito e sua energia tornam qualquer ambiente melhor.
 
