@@ -22,7 +22,7 @@ document.getElementById('form-nome').addEventListener('submit', function(event) 
     abrirPresente();
 });
 
-function abrirPresente() {
+async function abrirPresente() {
     const inputNome = document.getElementById('nome-input').value;
     
     if (inputNome.trim() === "") {
@@ -30,27 +30,41 @@ function abrirPresente() {
         return;
     }
 
-    // 1. Nome para BUSCAR (minúsculo e sem acento)
+    // Nome para BUSCAR (minúsculo e sem acento)
     const nomeBusca = inputNome.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
 
-    // 2. Nome para EXIBIR (primeira letra maiúscula)
+    // Nome para EXIBIR (primeira letra maiúscula)
     const nomeExibido = capitalizarPrimeiraLetra(inputNome.trim());
 
-    // 3. Busca a mensagem
-    // Se o nome não for encontrado, usa a mensagem padrão
-    let conteudo = mensagensEspeciais[nomeBusca] || mensagensEspeciais["padrao"];
+    // ====================================================================
+    // NOVIDADE: BUSCA SEGURA OS DADOS DO SERVIDOR (Serverless Function)
+    // ====================================================================
+    try {
+        const urlBusca = `/api/get-message?name=${encodeURIComponent(nomeBusca)}`;
+        
+        const resposta = await fetch(urlBusca);
+        if (!resposta.ok) {
+            throw new Error(`Erro de rede ao buscar a mensagem: ${resposta.status}`);
+        }
+        
+        const dados = await resposta.json();
+        const conteudo = dados.data; // Pega o conteúdo do servidor
+        
+        // 4. Exibe os textos
+        document.getElementById('titulo-mensagem').innerText = `Feliz Natal, ${nomeExibido}!`;
+        document.getElementById('texto-poema').innerText = conteudo.poema;
+        document.getElementById('texto-carta').innerText = conteudo.carta;
 
-    // 4. Exibe os textos
-    document.getElementById('titulo-mensagem').innerText = `Feliz Natal, ${nomeExibido}!`;
-    document.getElementById('texto-poema').innerText = conteudo.poema;
-    document.getElementById('texto-carta').innerText = conteudo.carta;
+        // 5. Troca as telas
+        document.getElementById('tela-inicial').classList.add('oculto');
+        document.getElementById('tela-carta').classList.remove('oculto');
+        
+        alternarAba('carta'); 
 
-    // 5. Troca as telas
-    document.getElementById('tela-inicial').classList.add('oculto');
-    document.getElementById('tela-carta').classList.remove('oculto');
-    
-    // Reseta para a aba da 'carta' (que você pediu para ser a primeira)
-    alternarAba('carta'); 
+    } catch (error) {
+        console.error("Falha ao carregar a mensagem:", error);
+        alert("Ops! Houve um erro ao buscar a mensagem. Tente novamente.");
+    }
 }
 
 function alternarAba(nomeAba) {
