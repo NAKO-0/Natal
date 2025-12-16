@@ -9,16 +9,50 @@
 const mensagensEspeciais = {
     // A lista completa que você forneceu:
     "gabrielle": {
-        poema: `Nossa amizade começou de um jeito completamente inesperado para mim. Já fazia muito tempo que eu não tinha amigas — mais especificamente, cerca de 12 anos — então tudo aconteceu de forma repentina. Mesmo assim, foi algo que eu gostei desde o início.
+        poema: `Nossa amizade surgiu sem aviso,
+como chegam as coisas que ficam.
+Depois de tanto tempo sem alguém assim,
+você apareceu —
+e, desde o início, fez sentido.
 
-Conversar com você é leve, divertido e especial. Mesmo quando eu me perco nos meus próprios pensamentos ou evito falar sobre coisas que me machucam — algo que eu sei que pode ser chato — você sempre esteve ali. Por isso, sou imensamente grato por todo o seu apoio, compreensão e amizade.
+Foi repentino, é verdade,
+mas leve como uma conversa sincera.
+Falar com você é simples, é bom,
+mesmo quando me perco em pensamentos
+ou silencio dores que ainda machucam.
 
-Eu realmente te considero minha melhor amiga e sei que sempre posso contar com você. Espero que você também sinta que pode confiar em mim da mesma forma. Quando você não puder ou não quiser falar, mas só precisar de companhia, ou quiser desabafar sobre qualquer outra coisa, eu estarei aqui. Isso é uma promessa.
+E ainda assim, você esteve ali.
+Presente.
+Paciente.
+Por isso, sou grato
+pelo apoio, pela escuta, pela amizade.
 
-Você mudou muito a minha visão sobre as pessoas e sobre a vida ao longo desse ano em que nos conhecemos. Desejo, de coração, que você esteja sempre bem. Mesmo que a distância exista, acredito que nossa amizade vai continuar firme — pelo menos é o que eu espero, e muito.
+Eu te considero minha melhor amiga
+e sei que posso contar com você.
+Espero que sinta o mesmo por mim.
+Quando faltar palavra,
+que sobre companhia.
+Quando faltar força,
+estarei aqui —
+isso é promessa.
 
-Foi um prazer e uma honra conhecer essa pessoa incrível que você é. Tenho certeza de que o seu futuro será brilhante.
-Feliz Natal, e obrigado por ser uma amiga tão incrível.`,
+Nesse ano em que nos conhecemos,
+minha forma de ver as pessoas mudou,
+minha forma de ver a vida também.
+Desejo, de coração, que você esteja bem,
+sempre.
+
+Mesmo que a distância exista,
+acredito que o laço permanece.
+Amizades verdadeiras resistem ao tempo,
+e eu espero que a nossa seja assim.
+
+Foi honra e prazer conhecer
+a pessoa incrível que você é.
+Seu futuro será brilhante, eu sei.
+Feliz Natal,
+e obrigado por ser
+uma amiga tão especial..`,
         carta: `Gabrielle
 
 Quero usar este Natal pra te agradecer por tudo o que você representou pra mim. Você esteve presente em momentos importantes da minha vida, principalmente quando as coisas estavam mais sensíveis e difíceis. Em conversas simples, você me ajudou mais do que imagina, me ouvindo, me apoiando e estando ali de verdade.
