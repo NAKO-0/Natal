@@ -30,7 +30,8 @@ Feliz Natal. Que Deus te abençoe hoje e sempre. 🎄✨`
     },
     "eduardo": {
         poema: "Estrelas no céu a guiar,\nUm ano novo a surgir,\nQue a alegria venha ficar,\nE nunca mais partir.",
-        carta: `O que dizer de você? Sem dúvida, uma das melhores pessoas que conheci esse ano — e a mais gay também ksksksks. Você se tornou um dos meus melhores amigos e, sinceramente, foi muito bom ter te conhecido. É até irônico pensar que tudo isso só aconteceu porque um dia você simplesmente decidiu me mandar mensagem e fazer umas perguntas completamente aleatórias, nada a ver, como se fosse a coisa mais normal do mundo.
+        carta: `Eduardo
+        O que dizer de você? Sem dúvida, uma das melhores pessoas que conheci esse ano — e a mais gay também ksksksks. Você se tornou um dos meus melhores amigos e, sinceramente, foi muito bom ter te conhecido. É até irônico pensar que tudo isso só aconteceu porque um dia você simplesmente decidiu me mandar mensagem e fazer umas perguntas completamente aleatórias, nada a ver, como se fosse a coisa mais normal do mundo.
 
 No começo foi tudo bem aos poucos, um processo meio lento, mas com o tempo você foi me apresentando pro pessoal, me puxando pra perto e me incluindo nas coisas. Te agradeço muito por isso, de verdade. E também por confiar em mim como seu melhor amigo — sei que talvez eu não seja exatamente o que você queria… mas é o que tá tendo no momento. Depois você arruma um melhor… ou não também, vai saber, kkkkk.
 
