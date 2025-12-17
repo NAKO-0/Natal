@@ -5,63 +5,28 @@
 // CHAVES DOS NOMES DEVEM SER SEM ACENTO E EM MINÚSCULO!
 const mensagensEspeciais = {
     "gabrielle": {
-        poema: `Nossa amizade surgiu sem aviso,
-como chegam as coisas que ficam.
-Depois de tanto tempo sem alguém assim,
-você apareceu —
-e, desde o início, fez sentido.
-
-Foi repentino, é verdade,
-mas leve como uma conversa sincera.
-Falar com você é simples, é bom,
-mesmo quando me perco em pensamentos
-ou silencio dores que ainda machucam.
-
-E ainda assim, você esteve ali.
-Presente.
-Paciente.
-Por isso, sou grato
-pelo apoio, pela escuta, pela amizade.
-
-Eu te considero minha melhor amiga
-e sei que posso contar com você.
-Espero que sinta o mesmo por mim.
-Quando faltar palavra,
-que sobre companhia.
-Quando faltar força,
-estarei aqui —
-isso é promessa.
-
-Nesse ano em que nos conhecemos,
-minha forma de ver as pessoas mudou,
-minha forma de ver a vida também.
-Desejo, de coração, que você esteja bem,
-sempre.
-
-Mesmo que a distância exista,
-acredito que o laço permanece.
-Amizades verdadeiras resistem ao tempo,
-e eu espero que a nossa seja assim.
-
-Foi honra e prazer conhecer
-a pessoa incrível que você é.
-Seu futuro será brilhante, eu sei.
-Feliz Natal,
-e obrigado por ser
-uma amiga tão especial..`,
+        poema: ``,
         carta: `Gabrielle
 
-Quero usar este Natal pra te agradecer por tudo o que você representou pra mim. Você esteve presente em momentos importantes da minha vida, principalmente quando as coisas estavam mais sensíveis e difíceis. Em conversas simples, você me ajudou mais do que imagina, me ouvindo, me apoiando e estando ali de verdade.
+Nossa amizade nasceu de um jeito totalmente inesperado — e talvez seja exatamente por isso que ela seja tão especial. Em um momento em que eu nem imaginava, você apareceu e trouxe leveza, riso e conforto. Desde o começo, conversar com você sempre foi fácil, sincero e bom. Daquelas conversas que acalmam a mente e aquecem o coração.
 
-Sua presença fez diferença. Ter alguém como você por perto trouxe segurança, clareza e conforto em momentos que eu nunca vou esquecer. Sua amizade foi algo leve, sincero e muito importante pra mim.
+Você sabe que, às vezes, eu me perco nos meus próprios pensamentos. Que nem sempre sei explicar o que sinto, e que o silêncio costuma ser meu refúgio quando algo machuca. Mesmo assim, você sempre esteve ali. Presente. Atenta. Me ouvindo, me apoiando e respeitando meu tempo. Isso é raro — e eu sou imensamente grato por isso.
 
-Você é uma pessoa incrível, dedicada e extremamente capaz. Eu tenho muita fé de que você vai passar na FUVEST, porque quem te conhece sabe do quanto você se esforça e do quanto merece. Isso é só o começo de tudo o que você ainda vai conquistar, e o próximo ano tem tudo pra ser abençoado e cheio de coisas boas pra você.
+Sua amizade tem um valor enorme pra mim. Você é alguém que faz diferença de verdade na minha vida e ocupa um lugar muito especial nela. Quero que saiba que também pode contar comigo. Seja para conversar, para ficar em silêncio ou simplesmente para não se sentir sozinha. Eu estarei aqui. Sempre.
 
-Que este Natal seja de paz, descanso e alegria, e que o novo ano venha com crescimento, felicidade e sonhos realizados. Obrigado por tudo, de verdade, e por fazer parte da minha vida.
-Lembre-se: você é uma pessoa incrível.
+Ao longo desse ano em que nos conhecemos, você mudou minha forma de enxergar as pessoas e até a vida. Me fez acreditar mais, confiar mais e sentir que ainda existem conexões genuínas. Sei que mudanças vão acontecer e que caminhos novos surgirão, mas tenho certeza de que nossa amizade vai continuar forte. Porque o que é real não se perde com o tempo nem com a distância.
 
-Com carinho,
-Henry`
+Foi um privilégio te conhecer. Uma honra poder chamar de amiga alguém tão incrível quanto você. Tenho certeza de que seu futuro será lindo, porque você é uma pessoa boa, forte e cheia de luz — e o mundo costuma devolver isso.
+
+Este ano foi intenso, inesperado e, em muitos momentos, desafiador. Houve estresse, medo e inseguranças, mas também existiram risos, alívios e momentos que valeram a pena. Passar por tudo isso ao seu lado fez toda a diferença pra mim. Obrigado por ser exatamente quem você é.
+
+Mesmo nos dias difíceis, você conseguiu tornar tudo mais leve. Muitos dos momentos especiais que guardo só existem por sua causa. Você é uma das pessoas que realmente conhecem minha vida, meus pensamentos e minhas verdades — e eu agradeço por isso mais do que consigo expressar em palavras.
+
+Sinto que você é uma daquelas pessoas que a gente leva para a vida inteira. Obrigado por me ouvir com atenção, por estar presente nos momentos importantes e por ser essa amiga incrível, rara e verdadeira.
+Te desejo um Feliz Natal, cheio de paz, carinho e felicidade. Que o próximo ano traga desafios que te façam crescer e coisas boas que você merece viver. Espero continuar acompanhando essa pessoa maravilhosa que você já é — e tudo aquilo que ainda vai se tornar.
+
+Obrigado por tudo.
+Feliz Natal. Que Deus te abençoe hoje e sempre. 🎄✨`
     },
     "eduardo": {
         poema: "Estrelas no céu a guiar,\nUm ano novo a surgir,\nQue a alegria venha ficar,\nE nunca mais partir.",
