@@ -1,13 +1,9 @@
-/* ================================================================
-  ARQUIVO SECRETO E SEGURO (Serverless Function)
-  O Vercel executa este código no servidor, longe dos olhos do usuário.
-  ================================================================
-*/
+// ARQUIVO SECRETO E SEGURO (Serverless Function)
+// Este código é executado no servidor Vercel.
 
 // Sua lista de mensagens agora fica AQUI, oculta para o público.
 // CHAVES DOS NOMES DEVEM SER SEM ACENTO E EM MINÚSCULO!
 const mensagensEspeciais = {
-    // A lista completa que você forneceu:
     "gabrielle": {
         poema: `Nossa amizade surgiu sem aviso,
 como chegam as coisas que ficam.
@@ -207,9 +203,9 @@ Henry`
     },
 
 
-  "higor": {
-    poema: "",
-    carta: `
+    "higor": {
+        poema: "",
+        carta: `
 Higor,
 
 Quero te agradecer por ser esse amigo tão especial. Sua presença sempre trouxe leveza, risadas e momentos bons que fizeram diferença no meu dia a dia.
@@ -219,11 +215,11 @@ Nossa amizade é simples, sincera e verdadeira, e isso é algo que eu valorizo m
 Com carinho,
 Henry
 `
-  },
+    },
 
-  "alexandre": {
-    poema: "",
-    carta: `
+    "alexandre": {
+        poema: "",
+        carta: `
 Alexandre,
 
 Quero aproveitar este Natal pra te agradecer pela amizade sincera. Você é alguém em quem dá pra confiar, conversar e contar quando precisa.
@@ -233,11 +229,11 @@ Que o próximo ano venha com crescimento, sucesso e coisas boas pra você. Obrig
 Com carinho,
 Henry
 `
-  },
+    },
 
-  "henrique": {
-    poema: "",
-    carta: `
+    "henrique": {
+        poema: "",
+        carta: `
 Henrique,
 
 Nossa amizade foi construída aos poucos, em momentos simples, mas isso não diminui o quanto ela é importante pra mim.
@@ -247,12 +243,12 @@ Te desejo um Natal tranquilo e um ano novo cheio de oportunidades, aprendizado e
 Com carinho,
 Henry
 `
-  },
+    },
 
-  "gabriel c": {
-    poema: "",
-    carta: `
-Gabrie C
+    "gabriel c": {
+        poema: "",
+        carta: `
+Gabriel C
 
 Quero te agradecer pela amizade e pelos momentos compartilhados. Seu jeito leve torna tudo mais fácil e mais divertido.
 
@@ -261,11 +257,11 @@ Que este Natal seja de paz e que o próximo ano venha com felicidade e crescimen
 Com carinho,
 Henry
 `
-  },
+    },
 
-  "gabriel h": {
-    poema: "",
-    carta: `
+    "gabriel h": {
+        poema: "",
+        carta: `
 Gabriel H
 
 Valorizo muito nossa amizade e tudo o que já vivemos juntos. Sua presença e suas ideias fizeram diferença em vários momentos.
@@ -275,11 +271,11 @@ Te desejo um Natal tranquilo e um próximo ano cheio de conquistas e boas experi
 Com carinho,
 Henry
 `
-  },
+    },
 
-  "mariane": {
-    poema: "",
-    carta: `
+    "mariane": {
+        poema: "",
+        carta: `
 Mariane
 
 Quero te agradecer por ser essa pessoa tão especial. Seu jeito e sua energia tornam qualquer ambiente melhor.
@@ -289,26 +285,22 @@ Que este Natal seja leve e que o próximo ano venha com alegria, conquistas e co
 Com carinho,
 Henry
 `
-  },
+    },
 
-  "milena": {
-    poema: "",
-    carta: `
+    "milena": {
+        poema: "",
+        carta: `
 Milena
 
 Obrigado pela amizade e pelos momentos compartilhados. Seu jeito de ser e sua atenção mostram o quanto você é uma pessoa especial.
 
 Te desejo um Natal cheio de luz e um ano novo com felicidade e sonhos se realizando.
 
-Com carinho,\
+Com carinho,
 Henry
 `
-  },
+    },
 
-
-
-
-    
     // MENSAGEM PADRÃO (Sempre a última para ser usada se o nome não for encontrado)
     "padrao": {
         poema: "O Natal chegou com alegria,\nTrazendo paz e harmonia,\nQue seu dia seja magia,\nCheio de luz e fantasia.",
@@ -318,7 +310,6 @@ Henry
 };
 
 // Esta é a função que o Vercel executa quando o navegador requisita /api/get-message
-
 module.exports = (req, res) => {
     // 1. Pega o nome do usuário enviado na requisição (query parameter 'name')
     const nomeBusca = req.query.name; 

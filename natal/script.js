@@ -1,6 +1,5 @@
 /* ================================================================
   FUNÇÃO DE CAPITALIZAÇÃO
-  Garante que a primeira letra do nome seja maiúscula (ex: "maria" vira "Maria").
   ================================================================
 */
 function capitalizarPrimeiraLetra(string) {
@@ -20,7 +19,7 @@ document.getElementById('form-nome').addEventListener('submit', function(event) 
     abrirPresente();
 });
 
-// A função de busca deve ser assíncrona (async)
+// A função deve ser assíncrona (async) para usar o fetch
 async function abrirPresente() {
     const inputNome = document.getElementById('nome-input').value;
     
@@ -39,7 +38,6 @@ async function abrirPresente() {
     // BUSCA SEGURA OS DADOS DO SERVIDOR (Serverless Function)
     // ====================================================================
     try {
-        // Faz a requisição para a rota que o Vercel cria automaticamente
         const urlBusca = `/api/get-message?name=${encodeURIComponent(nomeBusca)}`;
         
         const resposta = await fetch(urlBusca);
@@ -49,36 +47,25 @@ async function abrirPresente() {
         }
         
         const dados = await resposta.json();
-        // O servidor envia o conteúdo dentro da chave 'data'
-        const conteudo = dados.data; 
+        const conteudo = dados.data;
+        
+        // NOVIDADE: Pega APENAS o texto da carta.
+        const textoCompleto = conteudo.carta; 
         
         // 3. Exibe os textos
         document.getElementById('titulo-mensagem').innerText = `Feliz Natal, ${nomeExibido}!`;
-        document.getElementById('texto-poema').innerText = conteudo.poema;
-        document.getElementById('texto-carta').innerText = conteudo.carta;
+        document.getElementById('texto-conteudo-unico').innerText = textoCompleto.trim(); 
 
         // 4. Troca as telas
         document.getElementById('tela-inicial').classList.add('oculto');
         document.getElementById('tela-carta').classList.remove('oculto');
         
-        alternarAba('carta'); 
+        // Opcional: Se estiver usando controle de áudio com interação, adicione aqui
+        // alternarAudio(); 
 
     } catch (error) {
         console.error("Falha ao carregar a mensagem:", error);
         alert("Ops! Houve um erro ao buscar a mensagem. Verifique a conexão.");
-    }
-}
-
-function alternarAba(nomeAba) {
-    // Esconde/mostra o conteúdo
-    document.querySelectorAll('.conteudo-aba').forEach(conteudo => conteudo.classList.remove('aba-ativa'));
-    document.getElementById(`aba-${nomeAba}`).classList.add('aba-ativa');
-
-    // Ativa/desativa o botão
-    document.querySelectorAll('.tab-button').forEach(botao => botao.classList.remove('ativo'));
-    const botaoAtivo = Array.from(document.querySelectorAll('.tab-button')).find(b => b.textContent.toLowerCase().includes(nomeAba));
-    if (botaoAtivo) {
-        botaoAtivo.classList.add('ativo');
     }
 }
 
@@ -106,3 +93,29 @@ function criarNeve() {
     setTimeout(() => { floco.remove(); }, 5000);
 }
 setInterval(criarNeve, 100);
+
+/* ================================================================
+  CONTROLE DE ÁUDIO (OPCIONAL)
+  Se você incluiu a tag <audio> no HTML
+  ================================================================
+*/
+/*
+let estaMudo = true;
+const audio = document.getElementById('musica-fundo');
+const audioToggle = document.getElementById('audio-toggle');
+
+function alternarAudio() {
+    if (estaMudo) {
+        audio.muted = false;
+        audio.play().catch(error => {
+            console.error("Erro ao tentar tocar: ", error);
+        });
+        audioToggle.textContent = '🔇 Desativar Áudio';
+        estaMudo = false;
+    } else {
+        audio.muted = true;
+        audioToggle.textContent = '🎵 Ativar Áudio';
+        estaMudo = true;
+    }
+}
+*/
