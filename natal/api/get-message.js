@@ -31,6 +31,7 @@ Feliz Natal. Que Deus te abençoe hoje e sempre. 🎄✨`
     "eduardo": {
         poema: "Estrelas no céu a guiar,\nUm ano novo a surgir,\nQue a alegria venha ficar,\nE nunca mais partir.",
         carta: `Eduardo
+
         O que dizer de você? Sem dúvida, uma das melhores pessoas que conheci esse ano — e a mais gay também ksksksks. Você se tornou um dos meus melhores amigos e, sinceramente, foi muito bom ter te conhecido. É até irônico pensar que tudo isso só aconteceu porque um dia você simplesmente decidiu me mandar mensagem e fazer umas perguntas completamente aleatórias, nada a ver, como se fosse a coisa mais normal do mundo.
 
 No começo foi tudo bem aos poucos, um processo meio lento, mas com o tempo você foi me apresentando pro pessoal, me puxando pra perto e me incluindo nas coisas. Te agradeço muito por isso, de verdade. E também por confiar em mim como seu melhor amigo — sei que talvez eu não seja exatamente o que você queria… mas é o que tá tendo no momento. Depois você arruma um melhor… ou não também, vai saber, kkkkk.
@@ -43,7 +44,7 @@ Tenho orgulho de te chamar de um dos meus melhores amigos, mesmo quando você pa
 
 Quero te desejar um Feliz Natal, cheio de coisa boa. Que o próximo ano seja incrível pra você, com felicidade, risadas, conquistas e menos agarrões aleatórios. Que Deus abençoe sua vida e tudo o que ainda está por vir.
 
-Valeu por tudo, Dudu. 🎄💙
+Valeu por tudo, Dudu. 🎄✨
 Feliz Natal. Deus te abençoe.`
     },
     
@@ -51,16 +52,18 @@ Feliz Natal. Deus te abençoe.`
         poema: "O Natal chegou com alegria,\nTrazendo paz e harmonia,\nQue seu dia seja magia,\nCheio de luz e fantasia.",
         carta: `Victoria
 
-Quero te agradecer por ser uma amiga tão carismática e cuidadosa. Ao longo do tempo, você acompanhou nosso grupo como uma verdadeira irmã mais velha, sempre presente, atenta e preocupada com cada um de nós.
+Quero começar agradecendo por ser uma amiga tão carismática, atenciosa e cuidadosa. Desde que nos conhecemos, você se tornou uma presença constante e positiva em nosso grupo, quase como uma irmã mais velha, sempre observando, apoiando e se preocupando genuinamente com cada um de nós. É raro encontrar alguém que consegue unir tanto carinho, atenção e leveza ao mesmo tempo, e você faz isso naturalmente.
 
-Sua forma de cuidar, orientar e acolher fez muita diferença. Ter você por perto trouxe segurança, apoio e muitos momentos bons que vão ficar guardados com carinho.
+Sua forma de cuidar, orientar e acolher fez — e continua fazendo — uma diferença enorme na vida de quem tem a sorte de conviver com você. Ter você por perto trouxe segurança, confiança e momentos incríveis, daqueles que a gente guarda com carinho e que ficam na memória. Mais do que isso, sua energia positiva, sua forma de ver o mundo e de tratar as pessoas inspira todos ao seu redor, mesmo sem perceber.
 
-Te desejo um Natal cheio de paz, amor e descanso, e que o próximo ano venha com muitas bênçãos, conquistas e motivos para sorrir. Obrigado por tudo e por ser essa presença tão importante.
+Quero te desejar um Natal cheio de paz, amor e descanso, daqueles que recarregam o coração. Que o próximo ano seja ainda mais especial, trazendo muitas bênçãos, conquistas, alegrias e motivos sinceros para sorrir. Que cada passo que você dê seja acompanhado de aprendizado, crescimento e boas surpresas, e que você continue sendo essa pessoa incrível que ilumina o ambiente com sua presença.
 
-Lembre-se: Nunca se esqueça do quanto sua presença faz diferença e do bem que você espalha por onde passa.
+Nunca se esqueça do quanto você é importante, do bem que você espalha por onde passa e da diferença que faz na vida das pessoas que têm a sorte de te conhecer. A sua amizade é valiosa, e eu quero que saiba o quanto sou grato por ter você por perto, por tudo que compartilha e pelo jeito único de ser.
 
-Com carinho
-Henry`
+Com carinho,
+Henry
+
+Deus te abençoe. 🎄✨`
     },
 
     "daniel": {
