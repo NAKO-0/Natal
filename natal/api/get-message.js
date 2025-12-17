@@ -30,19 +30,20 @@ Feliz Natal. Que Deus te abençoe hoje e sempre. 🎄✨`
     },
     "eduardo": {
         poema: "Estrelas no céu a guiar,\nUm ano novo a surgir,\nQue a alegria venha ficar,\nE nunca mais partir.",
-        carta: `Luiz Eduardo
+        carta: `O que dizer de você? Sem dúvida, uma das melhores pessoas que conheci esse ano — e a mais gay também ksksksks. Você se tornou um dos meus melhores amigos e, sinceramente, foi muito bom ter te conhecido. É até irônico pensar que tudo isso só aconteceu porque um dia você simplesmente decidiu me mandar mensagem e fazer umas perguntas completamente aleatórias, nada a ver, como se fosse a coisa mais normal do mundo.
 
-Quero usar este Natal para te agradecer com calma e sinceridade por tudo o que você representou para mim. Você esteve presente em momentos decisivos do meu ano e da minha vida, em conversas que mudaram rumos, esclareceram pensamentos e fizeram diferença quando eu mais precisei.
+No começo foi tudo bem aos poucos, um processo meio lento, mas com o tempo você foi me apresentando pro pessoal, me puxando pra perto e me incluindo nas coisas. Te agradeço muito por isso, de verdade. E também por confiar em mim como seu melhor amigo — sei que talvez eu não seja exatamente o que você queria… mas é o que tá tendo no momento. Depois você arruma um melhor… ou não também, vai saber, kkkkk.
 
-Você também abriu portas importantes para mim, me apresentou pessoas incríveis e me permitiu conviver com gente maravilhosa. Essas conexões e experiências só aconteceram porque você esteve ali, estendendo a mão e caminhando junto. Isso é algo raro — e extremamente valioso.
+Mesmo você me tirando do sério às vezes, e tendo como passatempo favorito se fazer e se passar, ainda assim você é um cara incrível que merece tudo de bom. Se um dia você parar de brincar de agarrar os amigos vai ser um avanço enorme na sua evolução como ser humano, mas até lá a gente releva (ou tenta, né).
 
-Tenho muito orgulho de te chamar de amigo. Sua forma de agir, de ouvir e de se importar diz muito sobre quem você é. E, como canta a Taylor Swift, “long live all the magic we made” — que essas memórias e tudo o que construímos continuem vivas por muito tempo.
+Passamos por muita coisa esse ano, muito mais momentos bons do que ruins, e isso fez tudo valer a pena. Foi um ano cheio de risadas, momentos icônicos e piadas completamente aleatórias — “É lepra” simplesmente não tem como esquecer. Obrigado pelas conversas engraçadas, pelas conversas sérias e pelas conversas totalmente sem sentido nas madrugadas (essa última parte nem sempre foi tão boa assim, mas faz parte, kkkkk).
 
-Que este Natal seja de paz, descanso e alegria, e que o próximo ano venha com crescimento, saúde e muitas conquistas. Que a vida te devolva tudo aquilo que você entrega aos outros, em dobro.
-Lembre-se: o impacto que você tem na vida das pessoas é maior do que você imagina. Tenho muito orgulho de te chamar de amigo.
+Tenho orgulho de te chamar de um dos meus melhores amigos, mesmo quando você passa dos limites e me faz querer te agredir por cinco segundos. Mas esse é o seu jeito, e querendo ou não, é isso que te faz ser quem você é — único, doido e gente boa pra caramba.
 
-Com carinho
-Henry`
+Quero te desejar um Feliz Natal, cheio de coisa boa. Que o próximo ano seja incrível pra você, com felicidade, risadas, conquistas e menos agarrões aleatórios. Que Deus abençoe sua vida e tudo o que ainda está por vir.
+
+Valeu por tudo, Dudu. 🎄💙
+Feliz Natal. Deus te abençoe.`
     },
     
     "victoria": {
