@@ -301,6 +301,44 @@ button:hover {
 }
 
 /* ================================================================
+   Notificaçao
+   ================================================================ */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9); /* Fundo escuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000; /* Fica na frente de tudo */
+}
+
+.modal-conteudo {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    color: #333;
+    max-width: 80%;
+}
+
+.modal-conteudo h3 { color: #d42426; margin-bottom: 10px; }
+
+#btn-começar {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+/* ================================================================
    RESPONSIVIDADE UNIVERSAL (S23, IPHONE, TABLETS)
    ================================================================ */
 

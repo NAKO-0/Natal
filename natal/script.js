@@ -14,16 +14,28 @@ function capitalizarPrimeiraLetra(string) {
 /* ================================================================
    2. CONTROLE DE ÁUDIO E CONTADOR (DESTRAVAR)
    ================================================================ */
-function ativarRecursos() {
-    if (musica && musica.paused) {
-        musica.currentTime = 4; // Inicia no segundo 4 apenas na primeira vez
-        musica.volume = 0.5;
-        musica.play().catch(e => console.log("Aguardando interação..."));
+function fecharModalEIniciar() {
+    const modal = document.getElementById('modal-boas-vindas');
+    const musica = document.getElementById('musica-natal');
+
+    // 1. Esconde o aviso
+    if (modal) {
+        modal.style.display = 'none';
     }
-    atualizarContador();
-    // Remove para não reiniciar a música a cada clique
-    document.removeEventListener('click', ativarRecursos);
-    document.removeEventListener('touchstart', ativarRecursos);
+
+    // 2. Inicia a música (O navegador permite porque houve o clique no OK)
+    if (musica) {
+        musica.currentTime = 4; // Pula o silêncio
+        musica.volume = 0.5;
+        musica.play().then(() => {
+            console.log("Música iniciada após clique no OK!");
+        }).catch(e => console.log("Erro ao iniciar áudio:", e));
+    }
+
+    // 3. Garante que o contador comece
+    if (typeof atualizarContador === "function") {
+        atualizarContador();
+    }
 }
 
 document.addEventListener('click', ativarRecursos);
