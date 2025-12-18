@@ -3,39 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feliz Natal!</title>
+    <title>Uma Carta de Natal para Você</title>
+    
     <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 <body>
 
     <div id="neve-container"></div>
 
     <div class="container">
+        
         <div id="tela-inicial">
             <div id="contador" class="contador-natal">Carregando contagem...</div>
+            
             <h1>Ho Ho Ho!</h1>
-            <p>Digite seu nome para receber sua mensagem especial:</p>
+            <p>Digite seu nome para receber sua carta especial:</p>
+            
             <form id="form-nome">
-                <input type="text" id="nome-input" placeholder="Seu nome aqui...">
-                <button type="submit">Ver Mensagem</button>
+                <input type="text" id="nome-input" placeholder="Seu nome aqui..." autocomplete="off">
+                <button type="submit">Abrir Carta</button>
             </form>
+            
             <p id="erro-msg" class="oculto">Por favor, digite um nome!</p>
         </div>
 
         <div id="tela-carta" class="oculto">
-           <div class="envelope" id="area-print">
-                <h2 id="titulo-mensagem">Feliz Natal!</h2>
-                
-                <div class="conteudo-aba aba-ativa">
-                    <h3>Uma mensagem especial para você:</h3> 
-                    <p id="texto-conteudo-unico" class="texto-conteudo">...</p>
-                </div>
-                
-                <div class="botoes-acao">
-                    <button onclick="baixarCarta()" class="btn-compartilhar">📸 Salvar como Imagem</button>
-                    <button onclick="voltar()" class="btn-voltar">Voltar</button>
+            <div class="envelope-wrapper">
+                <div class="envelope" id="envelope-principal">
+                    <div class="flap"></div> <div class="pocket"></div> <div class="letter" id="corpo-carta">
+                        <div class="letter-content">
+                            <h2 id="titulo-mensagem">Feliz Natal!</h2>
+                            <p id="texto-conteudo-unico" class="texto-conteudo">...</p>
+                            
+                            <button onclick="voltar()" class="btn-voltar-carta">Fechar e Voltar</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
