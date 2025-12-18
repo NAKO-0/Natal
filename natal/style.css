@@ -316,6 +316,22 @@ button:hover {
     z-index: 10000;
 }
 
+.texto-modal {
+    font-size: 16px;
+    line-height: 1.5; /* Dá um espaço maior entre as linhas quebradas */
+    color: white;     /* Ou a cor que melhor contrastar com sua imagem */
+    text-align: center;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra para ler mesmo com fundo claro */
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+/* Garante que o PS fique um pouco mais discreto ou em destaque */
+.texto-modal strong {
+    color: #ffcf00; /* Um tom dourado/natalino para o 'PS' */
+}
+
 .modal-conteudo {
     background-image: url(src/fundo_not2.jpeg);
     background-size: 100% 100%; /* Força a imagem a esticar exatamente no tamanho da caixa */
