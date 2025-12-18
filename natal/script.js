@@ -17,38 +17,55 @@ function capitalizarPrimeiraLetra(string) {
    2. CONTROLE DE ÁUDIO E MODAL
    ================================================================ */
 /* ================================================================
-   CONTROLE ÚNICO DE ÁUDIO (TRAVA TOTAL)
+   CONTROLE DE ÁUDIO DEFINITIVO
    ================================================================ */
-let processoIniciado = false;
+let musicaIniciada = false;
 
-function fecharModalEIniciar(event) {
-    // Se já iniciou uma vez, sai da função e não faz nada
-    if (processoIniciado) return;
-
+function fecharModalEIniciar() {
     const modal = document.getElementById('modal-boas-vindas');
     const musica = document.getElementById('musica-natal');
 
-    // 1. Marcar como iniciado IMEDIATAMENTE
-    processoIniciado = true;
-
-    // 2. Esconder o modal
+    // 1. Esconde o modal
     if (modal) {
         modal.style.display = 'none';
     }
 
-    // 3. Tocar a música
-    if (musica) {
+    // 2. Tenta tocar a música
+    if (musica && !musicaIniciada) {
         musica.currentTime = 4;
         musica.volume = 0.5;
-        musica.play().catch(e => console.log("Erro ao tocar:", e));
+        
+        // No Android, o play() precisa ser direto
+        var playPromise = musica.play();
+
+        if (playPromise !== undefined) {
+            playPromise.then(_ => {
+                musicaIniciada = true;
+                console.log("Tocando!");
+            }).catch(error => {
+                console.log("Erro ao tocar. Tentando novamente no próximo clique.");
+            });
+        }
     }
 
-    // 4. REMOVER OS OUVINTES DA TELA PARA SEMPRE
+    // 3. Remove os ouvintes para não reiniciar
     document.removeEventListener('click', fecharModalEIniciar);
     document.removeEventListener('touchstart', fecharModalEIniciar);
-    
-    console.log("Sistema de áudio travado para não recomeçar.");
 }
+
+// Ouvintes apenas para o primeiro toque
+document.addEventListener('click', fecharModalEIniciar);
+document.addEventListener('touchstart', fecharModalEIniciar, { passive: true });
+
+/* ================================================================
+   PARA O SOM AO SAIR (VERSÃO QUE NÃO BUGA)
+   ================================================================ */
+window.onblur = function() {
+    if (musica) musica.pause();
+};
+window.onfocus = function() {
+    if (musica && musicaIniciada) musica.play();
+};
 
 // OUVINTES: Eles só vão funcionar UMA VEZ por causa do removeEventListener acima
 document.addEventListener('click', fecharModalEIniciar);
