@@ -65,31 +65,43 @@ function voltar() {
    3. EFEITOS ESPECIAIS (CONTADOR, MOUSE E NEVE)
    ================================================================ */
 
-// --- A. Contador Regressivo para o Natal ---
+/* ================================================================
+   FUNÇÃO DO CONTADOR (RESOLUÇÃO DO PROBLEMA)
+   ================================================================ */
 function atualizarContador() {
-    const agora = new Date().getTime();
-    // Define a data do Natal (25 de Dezembro)
-    let natal = new Date(`Dec 25, ${new Date().getFullYear()} 00:00:00`).getTime();
+    // 1. Pegamos o elemento pelo ID
+    const elementoContador = document.getElementById('contador');
     
-    // Se o Natal deste ano já passou, conta para o próximo ano
+    // Se o elemento não existir no HTML, o script para aqui para não travar o resto
+    if (!elementoContador) return;
+
+    const agora = new Date().getTime();
+    
+    // 2. Definimos a data do Natal (Certifique-se que o ano está correto)
+    let natal = new Date(`Dec 25, 2025 00:00:00`).getTime();
+    
+    // Se já passou do Natal de 2025, calcula para o próximo ano automaticamente
     if (agora > natal) {
         natal = new Date(`Dec 25, ${new Date().getFullYear() + 1} 00:00:00`).getTime();
     }
     
     const diferenca = natal - agora;
 
-    // Cálculos matemáticos para Dias, Horas e Minutos
-    const d = Math.floor(diferenca / (1000 * 60 * 60 * 24));
-    const h = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const m = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+    // 3. Cálculos de tempo
+    const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
 
-    // Atualiza o texto na tela
-    document.getElementById('contador').innerHTML = `Faltam <strong>${d}d ${h}h ${m}m</strong> para o Natal!`;
+    // 4. AQUI É ONDE O TEXTO MUDA:
+    // Substituímos o "Carregando..." pelo tempo real
+    elementoContador.innerHTML = `Faltam ${dias}d ${horas}h ${minutos}m para o Natal!`;
 }
-// Atualiza o tempo a cada 60 segundos
-setInterval(atualizarContador, 60000);
-atualizarContador(); // Roda uma vez ao carregar a página
 
+// 5. IMPORTANTE: Chame a função imediatamente para não esperar 1 minuto
+atualizarContador();
+
+// 6. Faz o contador atualizar a cada 1 minuto (60000 milissegundos)
+setInterval(atualizarContador, 60000);
 
 // --- B. Rastro de Estrelas no Mouse ---
 document.addEventListener('mousemove', function(e) {

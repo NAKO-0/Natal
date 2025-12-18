@@ -286,18 +286,16 @@ button:hover {
     text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
 }
 
-/* --- ESTILO DO EFEITO NO MOUSE --- */
 .rastro-estrela {
     position: absolute;
-    background: #ffd700;
+    background: #ffd700; /* Dourado */
     border-radius: 50%;
-    pointer-events: none; /* Não atrapalha os cliques */
-    box-shadow: 0 0 8px #fff, 0 0 15px #ffd700;
+    pointer-events: none;
+    z-index: 9999; /* Garante que fica em cima das imagens */
+    box-shadow: 0 0 10px #fff, 0 0 20px #ffd700;
     animation: sumirEstrela 1s forwards;
-    z-index: 9999;
 }
 
 @keyframes sumirEstrela {
-    0% { transform: scale(1); opacity: 1; }
-    100% { transform: scale(0); opacity: 0; }
+    to { transform: scale(0); opacity: 0; }
 }
