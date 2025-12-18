@@ -317,7 +317,7 @@ button:hover {
 }
 
 .modal-conteudo {
-    background-image: url(src/fundo_not.jpeg);
+    background-image: url(src/fundo_not2.jpeg);
     background-size: 100% 100%; /* Força a imagem a esticar exatamente no tamanho da caixa */
     background-position: center;
     background-repeat: no-repeat;
