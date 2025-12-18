@@ -95,26 +95,6 @@ async function abrirPresente() {
 }
 
 /* ================================================================
-   CONTROLE DE VISIBILIDADE (PARAR SOM AO SAIR)
-   ================================================================ */
-document.addEventListener("visibilitychange", function() {
-    if (musica) {
-        if (document.hidden) {
-            // Se a pessoa saiu da aba ou minimizou, pausa a música
-            musica.pause();
-            console.log("Música pausada: aba escondida.");
-        } else {
-            // Se ela voltar para o site, a música continua de onde parou
-            // Só volta a tocar se ela já tiver sido iniciada antes
-            if (musicaIniciada) {
-                musica.play().catch(e => console.log("Erro ao retomar:", e));
-                console.log("Música retomada: aba visível.");
-            }
-        }
-    }
-});
-
-/* ================================================================
    4. UTILITÁRIOS (CONTADOR E EFEITOS)
    ================================================================ */
 function atualizarContador() {
