@@ -187,12 +187,12 @@ function ativarTudo() {
     if (musica) {
         // DEFINE O INÍCIO: Pula os 4 segundos de silêncio
         if (musica.currentTime === 0) {
-            musica.currentTime = 4; 
+            musica.currentTime = 5; 
         }
 
         musica.volume = 0.5;
         musica.play().then(() => {
-            console.log("Música iniciada a partir do segundo 4!");
+            console.log("Música iniciada a partir do segundo 5!");
         }).catch(e => console.log("Aguardando interação...", e));
     }
     
