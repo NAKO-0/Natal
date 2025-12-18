@@ -317,7 +317,7 @@ button:hover {
 }
 
 .modal-conteudo {
-    background: #fff;
+    background-image: url(src/fundo_not.jpeg);
     padding: 30px;
     border-radius: 15px;
     text-align: center;

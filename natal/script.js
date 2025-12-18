@@ -70,22 +70,8 @@ async function abrirPresente() {
     const input = document.getElementById('nome-input');
     const nomeOriginal = input.value.trim();
     
-    // 1. TENTAR TOCAR O ÁUDIO (Ação imediata ao clique para o Celular permitir)
-    const musica = document.getElementById('musica-natal');
-    if (musica) {
-        // Só define o tempo se a música ainda não tiver começado
-        if (musica.currentTime === 0) {
-            musica.currentTime = 4;
-        }
-        musica.volume = 0.5;
-        
-        // O play() retorna uma promessa, vamos tratar para não dar erro no console
-        musica.play().catch(e => {
-            console.log("O navegador bloqueou o autoplay. O som tocará após a interação.");
-        });
-    }
+    // REMOVIDO: Toda a parte de musica.play() daqui para não dar conflito
 
-    // --- CONTINUAÇÃO DA SUA LÓGICA NORMAL ---
     if (nomeOriginal === "") {
         const erroMsg = document.getElementById('erro-msg');
         if (erroMsg) erroMsg.classList.remove('oculto');
@@ -96,7 +82,6 @@ async function abrirPresente() {
     const nomeExibido = capitalizarPrimeiraLetra(nomeOriginal);
 
     try {
-        // Busca a mensagem na sua API
         const resposta = await fetch(`/api/get-message?name=${encodeURIComponent(nomeBusca)}`);
         const dados = await resposta.json();
         
