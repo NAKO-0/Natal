@@ -54,38 +54,53 @@ if (formNome) {
 }
 
 async function abrirPresente() {
-    const nomeOriginal = inputNome.value.trim();
+    const input = document.getElementById('nome-input');
+    const nomeOriginal = input.value.trim();
     
-    if (nomeOriginal === "") {
-        const erro = document.getElementById('erro-msg');
-        if (erro) erro.classList.remove('oculto');
-        return;
+    // 1. TENTAR TOCAR O ÁUDIO (Ação imediata ao clique para o Celular permitir)
+    const musica = document.getElementById('musica-natal');
+    if (musica) {
+        // Só define o tempo se a música ainda não tiver começado
+        if (musica.currentTime === 0) {
+            musica.currentTime = 4;
+        }
+        musica.volume = 0.5;
+        
+        // O play() retorna uma promessa, vamos tratar para não dar erro no console
+        musica.play().catch(e => {
+            console.log("O navegador bloqueou o autoplay. O som tocará após a interação.");
+        });
     }
 
-    // Se o áudio ainda não estiver tocando, força o play aqui
-    if (musica && musica.paused) {
-        musica.play();
+    // --- CONTINUAÇÃO DA SUA LÓGICA NORMAL ---
+    if (nomeOriginal === "") {
+        const erroMsg = document.getElementById('erro-msg');
+        if (erroMsg) erroMsg.classList.remove('oculto');
+        return;
     }
 
     const nomeBusca = nomeOriginal.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     const nomeExibido = capitalizarPrimeiraLetra(nomeOriginal);
 
     try {
+        // Busca a mensagem na sua API
         const resposta = await fetch(`/api/get-message?name=${encodeURIComponent(nomeBusca)}`);
         const dados = await resposta.json();
         
         if (dados.data) {
+            const conteudo = dados.data;
             document.getElementById('titulo-mensagem').innerText = `Feliz Natal, ${nomeExibido}!`;
-            document.getElementById('texto-conteudo-unico').innerText = dados.data.carta.trim();
-            
+            document.getElementById('texto-conteudo-unico').innerText = conteudo.carta.trim();
+
             document.getElementById('tela-inicial').classList.add('oculto');
             document.getElementById('tela-carta').classList.remove('oculto');
         } else {
-            alert("Nome não encontrado na lista do Papai Noel!");
+            alert("Nome não encontrado!");
         }
+
     } catch (err) {
-        console.error("Erro:", err);
-        alert("Houve um erro ao buscar sua carta. Tente novamente!");
+        console.error("Erro na busca:", err);
+        alert("Ops! Algo deu errado ao buscar sua carta.");
     }
 }
 
