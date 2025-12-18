@@ -177,3 +177,36 @@ document.addEventListener('touchmove', function(e) {
         estrela.remove();
     }, 1000);
 }, { passive: true }); // Otimiza a performance do scroll no celular
+
+/* ================================================================
+   CONTROLE DE ÁUDIO PARA ARQUIVO .WEBA
+   ================================================================ */
+
+function iniciarMusica() {
+    const musica = document.getElementById('musica-natal');
+    
+    // Configura o volume (0.5 é 50%)
+    musica.volume = 0.5;
+
+    musica.play().then(() => {
+        console.log("Música .weba iniciada!");
+        removerEventos(); // Para de ouvir cliques após começar
+    }).catch(error => {
+        // O navegador bloqueou o autoplay, espera o próximo clique
+        console.log("Aguardando interação para tocar...");
+    });
+}
+
+// Escuta cliques e toques (essencial para o S23 e iPhone)
+function adicionarEventos() {
+    document.addEventListener('click', iniciarMusica);
+    document.addEventListener('touchstart', iniciarMusica);
+}
+
+function removerEventos() {
+    document.removeEventListener('click', iniciarMusica);
+    document.removeEventListener('touchstart', iniciarMusica);
+}
+
+// Ativa a espera pela interação
+adicionarEventos();
