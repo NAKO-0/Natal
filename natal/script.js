@@ -179,34 +179,49 @@ document.addEventListener('touchmove', function(e) {
 }, { passive: true }); // Otimiza a performance do scroll no celular
 
 /* ================================================================
-   CONTROLE DE ÁUDIO PARA ARQUIVO .WEBA
+   CONTROLO DE ÁUDIO E CONTADOR
    ================================================================ */
+const musica = document.getElementById('musica-natal');
 
-function iniciarMusica() {
-    const musica = document.getElementById('musica-natal');
+function ativarTudo() {
+    // Tenta tocar a música MP3
+    if (musica) {
+        musica.volume = 0.5;
+        musica.play().then(() => {
+            console.log("Música iniciada!");
+        }).catch(e => console.log("Erro ao tocar:", e));
+    }
     
-    // Configura o volume (0.5 é 50%)
-    musica.volume = 0.5;
-
-    musica.play().then(() => {
-        console.log("Música .weba iniciada!");
-        removerEventos(); // Para de ouvir cliques após começar
-    }).catch(error => {
-        // O navegador bloqueou o autoplay, espera o próximo clique
-        console.log("Aguardando interação para tocar...");
-    });
+    // Inicia o contador imediatamente ao primeiro toque
+    atualizarContador();
+    
+    // Remove os detetores para não repetir a cada clique
+    document.removeEventListener('click', ativarTudo);
+    document.removeEventListener('touchstart', ativarTudo);
 }
 
-// Escuta cliques e toques (essencial para o S23 e iPhone)
-function adicionarEventos() {
-    document.addEventListener('click', iniciarMusica);
-    document.addEventListener('touchstart', iniciarMusica);
+// Escuta a primeira interação (clique ou toque no celular)
+document.addEventListener('click', ativarTudo);
+document.addEventListener('touchstart', ativarTudo);
+
+function atualizarContador() {
+    const el = document.getElementById('contador');
+    if (!el) return;
+
+    // Define a data alvo (25 de Dezembro de 2025)
+    const natal = new Date("Dec 25, 2025 00:00:00").getTime();
+    const agora = new Date().getTime();
+    const diff = natal - agora;
+
+    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+    // Substitui o texto "Carregando contagem..." pelo tempo real
+    el.innerHTML = `Faltam ${d}d ${h}h ${m}m para o Natal!`;
 }
 
-function removerEventos() {
-    document.removeEventListener('click', iniciarMusica);
-    document.removeEventListener('touchstart', iniciarMusica);
-}
-
-// Ativa a espera pela interação
-adicionarEventos();
+// Atualiza o tempo a cada 1 minuto
+setInterval(atualizarContador, 60000);
+// Tenta rodar uma vez ao carregar, caso o navegador permita
+window.onload = atualizarContador;
