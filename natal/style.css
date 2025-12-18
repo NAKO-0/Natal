@@ -1,199 +1,272 @@
-/* --- CONFIGURAÇÕES GERAIS --- */
+/* =========================================
+   Configurações Gerais e Fundo
+========================================= */
 body {
     margin: 0;
     padding: 0;
-    /* Imagem de fundo da página inteira */
-    background: #0a0a0a url(src/fundo2.jpeg) no-repeat center center fixed;
+    /* CORREÇÃO CRÍTICA: O fundo não se repete e cobre a tela toda */
+    background: url(src/fundo2.jpeg) no-repeat center center fixed;
     background-size: cover;
+    
     font-family: 'Roboto', sans-serif;
-    color: white;
-    overflow-x: hidden;
+    /* Adiciona um overlay escuro sobre o fundo para o cartão brilhar mais */
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5); 
+    color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    overflow: hidden;
 }
 
-/* Container principal para centralizar o conteúdo */
-.container { 
-    text-align: center; 
-    z-index: 10; 
-    width: 100%; 
-    max-width: 500px; 
-    padding: 20px; 
+/* =========================================
+   O Cartão Principal (Container)
+========================================= */
+.container {
+    /* Mantemos sua imagem de fundo interna */
+    background-image: url(src/fundo.jpg);
+    background-size: cover;
+    background-position: center;
+    
+    padding: 2.5rem;
+    border-radius: 25px; /* Bordas mais arredondadas */
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    z-index: 10;
+    position: relative;
+
+    /* MELHORIA DE DESIGN: Substituímos a borda sólida por sombras complexas
+       Isso cria um efeito de "brilho" e profundidade 3D */
+    border: none;
+    box-shadow: 
+        0 10px 30px rgba(0,0,0,0.5),      /* Sombra de profundidade */
+        0 0 40px rgba(192, 57, 43, 0.7),   /* Brilho vermelho externo */
+        inset 0 0 20px rgba(255, 215, 0, 0.3); /* Brilho dourado interno */
+    
+    /* Um leve efeito de vidro fosco nas bordas */
+    backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.1); /* Borda sutil de vidro */
 }
 
-/* Classe utilitária para esconder elementos */
-.oculto { display: none !important; }
-
-/* Estilo do Título Natalino */
-h1 { 
-    font-family: 'Mountains of Christmas', cursive; 
-    font-size: 4rem; 
-    color: #e74c3c; 
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.5); 
+/* =========================================
+   Tipografia Mágica
+========================================= */
+   h1, h2, h3 {
+    font-family: 'Mountains of Christmas', cursive;
+    color: #c0392b; /* Vermelho Natal */
+    
+    /* REMOVEMOS O ANTIGO text-shadow E COLOCAMOS UM NOVO, MAIS FORTE */
+    text-shadow: 
+        /* Sombras para o contorno (Branco) */
+        1px 1px 0 #fff,  /* Direita/Baixo */
+        -1px -1px 0 #fff, /* Esquerda/Cima */
+        1px -1px 0 #fff,  /* Direita/Cima */
+        -1px 1px 0 #fff,  /* Esquerda/Baixo */
+        
+        /* Sombras para profundidade e brilho (Dourado/Preto) */
+        2px 2px 5px rgba(0, 0, 0, 0.6), /* Sombra preta para separar do fundo */
+        0 0 15px rgba(255, 215, 0, 0.8); /* Brilho dourado forte */
+        
+    letter-spacing: 1px;
 }
 
-/* --- ESTILOS DO FORMULÁRIO --- */
-#nome-input { 
-    padding: 12px; 
-    border-radius: 25px; 
-    border: none; 
-    width: 80%; 
-    margin-bottom: 15px; 
-    font-size: 1.1rem; 
-    text-align: center; 
+h1 { font-size: 3rem; margin-bottom: 1rem; }
+
+p {
+    color: #fdfbf7;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    font-size: 1.1rem;
 }
 
-button { 
-    background: #e74c3c; 
-    color: white; 
-    border: none; 
-    padding: 12px 30px; 
-    border-radius: 25px; 
-    font-size: 1.1rem; 
-    cursor: pointer; 
-    transition: 0.3s; 
-    font-weight: bold; 
+/* =========================================
+   Campos de Entrada (Input) e Botões
+========================================= */
+input {
+    padding: 15px;
+    border-radius: 30px; /* Arredondado */
+    /* Fundo cor de pergaminho com transparência */
+    background-color: rgba(253, 251, 247, 0.95); 
+    border: 3px solid #c0392b; /* Borda vermelha festiva */
+    width: 80%;
+    font-size: 18px;
+    margin-top: 15px;
+    color: #c0392b;
+    font-family: 'Mountains of Christmas', cursive; /* Usa a fonte do tema */
+    text-align: center;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.2); /* Sombra interna para profundidade */
+    transition: all 0.3s ease;
 }
 
-button:hover { 
-    background: #c0392b; 
-    transform: scale(1.05); 
+input::placeholder {
+    color: #c0392b;
+    opacity: 0.7;
 }
 
-/* --- CONTADOR DE NATAL --- */
-.contador-natal { 
-    background: rgba(0, 0, 0, 0.6); 
-    padding: 10px 20px; 
-    border-radius: 30px; 
-    display: inline-block; 
-    margin-bottom: 20px; 
-    border: 1px solid gold; 
-    color: gold; 
-    font-weight: bold; 
+input:focus {
+    outline: none;
+    /* O campo brilha quando clicado */
+    box-shadow: 0 0 20px rgba(192, 57, 43, 0.8);
+    transform: scale(1.02);
 }
 
-/* --- ESTRUTURA DO ENVELOPE (A MÁGICA) --- */
-.envelope-wrapper { 
-    height: 450px; 
-    display: flex; 
-    justify-content: center; 
-    align-items: flex-end; 
-    perspective: 1000px; /* Cria profundidade para a animação 3D */
+button {
+    /* Gradiente rico em vez de cor sólida */
+    background: linear-gradient(to bottom, #27ae60, #145a32);
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    margin-top: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Mountains of Christmas', cursive;
+    font-weight: bold;
+    letter-spacing: 1px;
+    /* Sombra 3D no botão */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    transition: all 0.3s ease;
+    border: 2px solid #1e8449;
 }
 
-.envelope { 
-    position: relative; 
-    width: 320px; 
-    height: 200px; 
-    background: #c0392b; 
-    box-shadow: 0 15px 35px rgba(0,0,0,0.5); 
+button:hover {
+    /* Efeito de "levantar" e brilhar ao passar o mouse */
+    transform: translateY(-3px) scale(1.05);
+    background: linear-gradient(to bottom, #2ecc71, #1e8449);
+    box-shadow: 0 10px 25px rgba(39, 174, 96, 0.7);
 }
 
-/* Aba do envelope (o triângulo que abre) */
-.flap { 
-    position: absolute; 
-    top: 0; 
-    width: 0; 
-    height: 0; 
-    border-left: 160px solid transparent; 
-    border-right: 160px solid transparent;
-    border-top: 120px solid #e74c3c; 
-    z-index: 3; 
-    transform-origin: top; /* Faz girar a partir do topo */
-    transition: transform 0.6s ease; /* Velocidade da abertura */
+/* =========================================
+   Estilos das Abas (Tabs) e Conteúdo
+========================================= */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    background: rgba(0,0,0,0.2);
+    padding: 5px;
+    border-radius: 30px;
+    display: inline-flex; /* Mantém as abas compactas */
 }
 
-/* Bolso frontal do envelope */
-.pocket { 
-    position: absolute; 
-    bottom: 0; 
-    width: 0; 
-    height: 0; 
-    border-left: 160px solid #e74c3c; 
-    border-right: 160px solid #e74c3c;
-    border-bottom: 100px solid #c0392b; 
-    z-index: 4; 
+.tab-button {
+    background: transparent;
+    margin: 0;
+    padding: 10px 25px;
+    opacity: 0.7;
+    border-radius: 25px;
+    box-shadow: none;
+    border: none;
+    color: #fdfbf7;
 }
 
-/* O Papel (Carta) que fica dentro */
-.letter { 
-    position: absolute; 
-    bottom: 5px; 
-    left: 10px; 
-    width: 300px; 
-    height: 180px; 
-    background: #fdfdfd; 
-    padding: 25px; 
-    box-sizing: border-box; 
-    transition: all 0.8s ease-in-out; 
-    z-index: 2; 
-    overflow-y: auto; /* Deixa rolar o texto se for muito grande */
-    box-shadow: 0 -5px 15px rgba(0,0,0,0.1); 
-    border-radius: 5px;
+.tab-button.ativo {
+    background-color: #27ae60;
+    opacity: 1;
+    box-shadow: 0 0 15px rgba(39, 174, 96, 0.6);
+    transform: scale(1.0); /* Reseta o scale do hover genérico */
 }
 
-.letter-content { 
-    color: #2c3e50; 
-    font-size: 0.95rem; 
-    line-height: 1.6; 
-    text-align: left; 
+.conteudo-aba {
+    display: none;
+    padding: 25px;
+    border-radius: 20px;
+    
+    /* Imagem de fundo e estilos existentes */
+    background-image: url('afd85583b0384da15a1cb5e0343b0daf.jpg'), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    color: #fdfbf7;
+    text-shadow: 2px 2px 4px rgba(0,0,0,1);
+    border: 3px solid rgba(255, 215, 0, 0.5); 
+    box-shadow: inset 0 0 30px rgba(0,0,0,0.8);
+    
+    /* MODIFICAÇÕES CRÍTICAS PARA RESPONSIVIDADE E SCROLL */
+    
+    /* Altura Máxima: Limita a altura em telas grandes */
+    max-height: 400px; 
+    
+    /* Altura Mínima: Garante que haja espaço mesmo para texto curto */
+    min-height: 150px; 
+    
+    /* A MÁGICA: Adiciona barra de rolagem vertical (Y) se o conteúdo for maior que max-height */
+    overflow-y: auto;
 }
 
-.letter-content h2 { 
-    font-family: 'Mountains of Christmas'; 
-    color: #c0392b; 
-    margin-top: 0; 
+/* Opcional: Estilo da barra de rolagem (WebKit - Chrome/Safari) */
+.conteudo-aba::-webkit-scrollbar {
+    width: 8px;
 }
 
-/* --- ANIMAÇÃO QUANDO A CLASSE "ABERTO" É ADICIONADA --- */
-.envelope.aberto .flap { 
-    transform: rotateX(180deg); /* Gira a aba para cima */
-    z-index: 1; /* Passa para trás da carta */
+.conteudo-aba::-webkit-scrollbar-thumb {
+    background-color: #85d8a700; /* Verde Natal */
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0);
 }
 
-.envelope.aberto .letter { 
-    height: 500px; /* O papel cresce */
-    bottom: 100px; /* O papel sobe para sair do envelope */
-    z-index: 5; /* Fica na frente de tudo */
-    transform: scale(1.1); /* Dá um zoom leve no papel */
-    padding: 40px 25px;
+.conteudo-aba::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+/* FIM DAS MODIFICAÇÕES */
+
+
+.conteudo-aba.aba-ativa {
+    display: block;
+    animation: fadeIn 0.5s ease-in;
 }
 
-/* Botão pequeno dentro da carta para fechar */
-.btn-voltar-carta { 
-    background: #7f8c8d; 
-    font-size: 0.8rem; 
-    padding: 5px 15px; 
-    margin-top: 20px; 
+.conteudo-aba.aba-ativa {
+    display: block;
+    animation: fadeIn 0.5s ease-in;
 }
 
-/* --- EFEITOS ESPECIAIS (NEVE E ESTRELAS) --- */
-.floco { 
-    position: fixed; 
-    top: -10px; 
-    background: white; 
-    border-radius: 50%; 
-    opacity: 0.8; 
-    pointer-events: none; 
-    animation: cair linear forwards; 
+.texto-conteudo {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    white-space: pre-line;
+    font-weight: 500;
 }
 
-@keyframes cair { 
-    to { transform: translateY(105vh) rotate(360deg); } 
+/* =========================================
+   Utilitários e Animações
+========================================= */
+.oculto { display: none; }
+
+#erro-msg {
+    color: #ff6b6b;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+    margin-top: 10px;
 }
 
-.rastro-estrela { 
-    position: absolute; 
-    background: gold; 
-    border-radius: 50%; 
-    pointer-events: none; 
-    box-shadow: 0 0 5px gold; 
-    animation: sumir 1s forwards; 
-    z-index: 9999; 
+.envelope { animation: fadeInScale 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+
+/* Animação de Aparecer com um leve "pulo" elástico */
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.8) translateY(20px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
 }
 
-@keyframes sumir { 
-    to { transform: scale(0); opacity: 0; } 
+@keyframes fadeIn {
+    from { opacity: 0; } to { opacity: 1; }
+}
+
+/* Efeito de Neve */
+.floco {
+    position: absolute;
+    top: -10px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    pointer-events: none;
+    animation: cair linear infinite;
+    box-shadow: 0 0 5px white; /* Neve brilha um pouco */
+}
+
+@keyframes cair {
+    to { transform: translateY(105vh); }
 }
