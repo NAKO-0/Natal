@@ -179,42 +179,39 @@ document.addEventListener('touchmove', function(e) {
 }, { passive: true }); // Otimiza a performance do scroll no celular
 
 /* ================================================================
-   CONTROLO DE ÁUDIO (INÍCIO NO SEGUNDO 4) E CONTADOR
+   1. TOPO DO ARQUIVO: CONTROLE DE ÁUDIO E CONTADOR
    ================================================================ */
 const musica = document.getElementById('musica-natal');
 
-function ativarTudo() {
+// Esta função destrava tudo no primeiro toque (essencial para S23)
+function desbloquearRecursos() {
     if (musica) {
-        // DEFINE O INÍCIO: Pula os 4 segundos de silêncio
-        if (musica.currentTime === 0) {
-            musica.currentTime = 5; 
-        }
-
+        musica.currentTime = 4; // Pula o silêncio
         musica.volume = 0.5;
-        musica.play().then(() => {
-            console.log("Música iniciada a partir do segundo 5!");
-        }).catch(e => console.log("Aguardando interação...", e));
+        musica.play()
+            .then(() => console.log("Áudio liberado!"))
+            .catch(e => console.log("Aguardando interação real..."));
     }
     
-    // Atualiza o contador imediatamente
+    // Inicia o contador para sair do "Carregando..."
     atualizarContador();
-    
-    // Remove os detetores para não reiniciar a música
-    document.removeEventListener('click', ativarTudo);
-    document.removeEventListener('touchstart', ativarTudo);
+
+    // Remove os detetores para não reiniciar ao clicar de novo
+    document.removeEventListener('touchstart', desbloquearRecursos);
+    document.removeEventListener('click', desbloquearRecursos);
 }
 
-// Os eventos de escuta continuam os mesmos
-document.addEventListener('click', ativarTudo);
-document.addEventListener('touchstart', ativarTudo);
+// Fica ouvindo o primeiro toque/clique na tela
+document.addEventListener('touchstart', desbloquearRecursos);
+document.addEventListener('click', desbloquearRecursos);
 
-/* --- Restante do código do contador (atualizarContador) continua igual --- */
-
+/* ================================================================
+   2. FUNÇÃO DO CONTADOR
+   ================================================================ */
 function atualizarContador() {
     const el = document.getElementById('contador');
     if (!el) return;
 
-    // Define a data alvo (25 de Dezembro de 2025)
     const natal = new Date("Dec 25, 2025 00:00:00").getTime();
     const agora = new Date().getTime();
     const diff = natal - agora;
@@ -223,11 +220,14 @@ function atualizarContador() {
     const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
 
-    // Substitui o texto "Carregando contagem..." pelo tempo real
     el.innerHTML = `Faltam ${d}d ${h}h ${m}m para o Natal!`;
 }
-
-// Atualiza o tempo a cada 1 minuto
 setInterval(atualizarContador, 60000);
-// Tenta rodar uma vez ao carregar, caso o navegador permita
-window.onload = atualizarContador;
+
+/* ================================================================
+   3. RESTANTE DO SEU CÓDIGO (Capitalizar, Abrir Presente, Neve...)
+   ================================================================ */
+
+// Coloque aqui para baixo a função capitalizarPrimeiraLetra()...
+// Coloque aqui para baixo a função abrirPresente()...
+// Coloque aqui para baixo o efeito de neve e estrelas...
