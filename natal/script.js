@@ -150,3 +150,30 @@ function criarNeve() {
 }
 // Cria um novo floco de neve a cada 150 milissegundos
 setInterval(criarNeve, 150);
+
+/* ================================================================
+   ADICIONAL: Rastro de Estrelas para Celulares (Touch)
+   ================================================================ */
+document.addEventListener('touchmove', function(e) {
+    // Pega a posição do primeiro toque
+    const touch = e.touches[0];
+    
+    const estrela = document.createElement('div');
+    estrela.className = 'rastro-estrela';
+    
+    // Usa pageX e pageY para posicionar onde o dedo está
+    estrela.style.left = touch.pageX + 'px';
+    estrela.style.top = touch.pageY + 'px';
+    
+    // Tamanho aleatório para o brilho
+    const tamanho = Math.random() * 6 + 2 + 'px';
+    estrela.style.width = tamanho;
+    estrela.style.height = tamanho;
+    
+    document.body.appendChild(estrela);
+    
+    // Remove após 1 segundo
+    setTimeout(() => {
+        estrela.remove();
+    }, 1000);
+}, { passive: true }); // Otimiza a performance do scroll no celular
