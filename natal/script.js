@@ -38,8 +38,9 @@ function fecharModalEIniciar() {
     }
 }
 
-document.addEventListener('click', ativarRecursos);
-document.addEventListener('touchstart', ativarRecursos, { passive: true });
+// Se quiser manter o clique em qualquer lugar da tela como alternativa:
+document.addEventListener('click', fecharModalEIniciar); 
+document.addEventListener('touchstart', fecharModalEIniciar, { passive: true });
 
 function atualizarContador() {
     const el = document.getElementById('contador');
@@ -137,6 +138,16 @@ document.addEventListener('mousemove', function(e) {
     setTimeout(() => { estrela.remove(); }, 1000);
 });
 
+document.addEventListener('touchmove', function(e) {
+    const touch = e.touches[0];
+    const estrela = document.createElement('div');
+    estrela.className = 'rastro-estrela';
+    estrela.style.left = touch.pageX + 'px';
+    estrela.style.top = touch.pageY + 'px';
+    document.body.appendChild(estrela);
+    setTimeout(() => { estrela.remove(); }, 1000);
+}, { passive: true });
+
 function criarNeve() {
     const container = document.getElementById('neve-container');
     if (!container) return;
@@ -151,3 +162,5 @@ function criarNeve() {
     setTimeout(() => { floco.remove(); }, 5000);
 }
 setInterval(criarNeve, 150);
+
+
