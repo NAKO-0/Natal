@@ -179,30 +179,36 @@ document.addEventListener('touchmove', function(e) {
 }, { passive: true }); // Otimiza a performance do scroll no celular
 
 /* ================================================================
-   CONTROLO DE ÁUDIO E CONTADOR
+   CONTROLO DE ÁUDIO (INÍCIO NO SEGUNDO 4) E CONTADOR
    ================================================================ */
 const musica = document.getElementById('musica-natal');
 
 function ativarTudo() {
-    // Tenta tocar a música MP3
     if (musica) {
+        // DEFINE O INÍCIO: Pula os 4 segundos de silêncio
+        if (musica.currentTime === 0) {
+            musica.currentTime = 4; 
+        }
+
         musica.volume = 0.5;
         musica.play().then(() => {
-            console.log("Música iniciada!");
-        }).catch(e => console.log("Erro ao tocar:", e));
+            console.log("Música iniciada a partir do segundo 4!");
+        }).catch(e => console.log("Aguardando interação...", e));
     }
     
-    // Inicia o contador imediatamente ao primeiro toque
+    // Atualiza o contador imediatamente
     atualizarContador();
     
-    // Remove os detetores para não repetir a cada clique
+    // Remove os detetores para não reiniciar a música
     document.removeEventListener('click', ativarTudo);
     document.removeEventListener('touchstart', ativarTudo);
 }
 
-// Escuta a primeira interação (clique ou toque no celular)
+// Os eventos de escuta continuam os mesmos
 document.addEventListener('click', ativarTudo);
 document.addEventListener('touchstart', ativarTudo);
+
+/* --- Restante do código do contador (atualizarContador) continua igual --- */
 
 function atualizarContador() {
     const el = document.getElementById('contador');
