@@ -309,35 +309,64 @@ button:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.9); /* Fundo escuro */
+    background: rgba(0, 0, 0, 0.9);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10000; /* Fica na frente de tudo */
+    z-index: 10000;
 }
 
 .modal-conteudo {
+    /* Imagem de fundo */
     background-image: url(src/fundo_not.jpeg);
-    padding: 30px;
-    border-radius: 15px;
+    
+    /* AJUSTES PARA A IMAGEM FICAR NO TAMANHO CERTO */
+    background-size: cover;      /* Faz a imagem preencher todo o espaço */
+    background-position: center; /* Centraliza o que é mais importante na imagem */
+    background-repeat: no-repeat; /* Impede que a imagem se duplique */
+    
+    /* Tamanho do Modal */
+    width: 85%;                  /* No celular, ocupa quase toda a largura */
+    max-width: 400px;            /* No PC, não fica exageradamente grande */
+    min-height: 200px;           /* Garante um tamanho mínimo bonito */
+    
+    padding: 40px 20px;
+    border-radius: 20px;
     text-align: center;
-    color: #333;
-    max-width: 80%;
+    
+    /* Sombra e borda para dar destaque */
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    border: 2px solid #d42426;
+    
+    /* Garante que o texto seja legível sobre a imagem */
+    color: white; 
 }
 
-.modal-conteudo h3 { color: #d42426; margin-bottom: 10px; }
+/* DICA: Adicione um contorno no texto se a imagem for clara demais */
+.modal-conteudo h3 { 
+    color: #ffffff; /* Mudei para branco para destacar na imagem */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8); /* Sombra para ler bem */
+    font-size: 24px;
+    margin-bottom: 10px; 
+}
 
 #btn-começar {
-    background: #28a745;
+    background: #d42426; /* Mudei para vermelho natalino */
     color: white;
     border: none;
     padding: 12px 25px;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 50px; /* Botão mais arredondado fica moderno */
+    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
-    margin-top: 15px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.2s;
 }
 
+#btn-começar:active {
+    transform: scale(0.95); /* Efeito de clique no celular */
+}
 /* ================================================================
    RESPONSIVIDADE UNIVERSAL (S23, IPHONE, TABLETS)
    ================================================================ */
