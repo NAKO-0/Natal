@@ -270,3 +270,74 @@ button:hover {
 @keyframes cair {
     to { transform: translateY(105vh); }
 }
+
+/* --- NOVOS ESTILOS INTERATIVOS --- */
+
+/* Estilo do Contador de Natal */
+.contador-natal {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 8px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 20px;
+    border: 1px solid gold;
+    font-size: 0.9rem;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estilo das Estrelinhas do Mouse */
+.rastro-estrela {
+    position: absolute;
+    background: gold;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 5px gold;
+    animation: sumirEstrela 1s forwards;
+    z-index: 9999;
+}
+
+@keyframes sumirEstrela {
+    from { transform: scale(1); opacity: 1; }
+    to { transform: scale(0); opacity: 0; }
+}
+
+/* Ajuste do Texto da Carta Unificada */
+.texto-conteudo {
+    white-space: pre-wrap; /* Mantém as quebras de linha que você fez no JS */
+    line-height: 1.6;
+    text-align: left;
+    margin-top: 15px;
+}
+
+/* Organização dos Botões (Baixar e Voltar) */
+.botoes-acao {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn-compartilhar {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.btn-compartilhar:hover {
+    background: #219150;
+    transform: scale(1.05);
+}
+
+/* Estilo específico para o print não sair cortado */
+#area-print {
+    padding: 30px;
+    border-radius: 15px;
+}

@@ -6,6 +6,7 @@
     <title>Feliz Natal!</title>
     <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 <body>
 
@@ -13,6 +14,7 @@
 
     <div class="container">
         <div id="tela-inicial">
+            <div id="contador" class="contador-natal">Carregando contagem...</div>
             <h1>Ho Ho Ho!</h1>
             <p>Digite seu nome para receber sua mensagem especial:</p>
             <form id="form-nome">
@@ -23,20 +25,22 @@
         </div>
 
         <div id="tela-carta" class="oculto">
-           <div class="envelope">
+           <div class="envelope" id="area-print">
                 <h2 id="titulo-mensagem">Feliz Natal!</h2>
                 
-                <div id="aba-carta" class="conteudo-aba aba-ativa">
+                <div class="conteudo-aba aba-ativa">
                     <h3>Uma mensagem especial para você:</h3> 
                     <p id="texto-conteudo-unico" class="texto-conteudo">...</p>
                 </div>
                 
-                <button onclick="voltar()" class="btn-voltar">Voltar</button>
+                <div class="botoes-acao">
+                    <button onclick="baixarCarta()" class="btn-compartilhar">📸 Salvar como Imagem</button>
+                    <button onclick="voltar()" class="btn-voltar">Voltar</button>
+                </div>
             </div>
         </div>
     </div>
 
     <script src="script.js"></script>
-    
-    </body>
+</body>
 </html>

@@ -1,121 +1,110 @@
 /* ================================================================
-  FUNÇÃO DE CAPITALIZAÇÃO
-  ================================================================
-*/
-function capitalizarPrimeiraLetra(string) {
-    if (!string) return string;
-    return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
-}
-
-
-/* ================================================================
-  LÓGICA PRINCIPAL DO SITE
-  ================================================================
-*/
-
-// Adiciona evento para o formulário funcionar com Enter
-document.getElementById('form-nome').addEventListener('submit', function(event) {
-    event.preventDefault(); 
+  CONFIGURAÇÕES INICIAIS E EVENTOS
+  ================================================================ */
+document.getElementById('form-nome').addEventListener('submit', function(e) {
+    e.preventDefault();
     abrirPresente();
 });
 
-// A função deve ser assíncrona (async) para usar o fetch
+function capitalizarPrimeiraLetra(s) {
+    if (!s) return s;
+    return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
+}
+
+/* ================================================================
+  BUSCA DA MENSAGEM NO SERVIDOR (API)
+  ================================================================ */
 async function abrirPresente() {
-    const inputNome = document.getElementById('nome-input').value;
+    const input = document.getElementById('nome-input');
+    const nomeOriginal = input.value.trim();
     
-    if (inputNome.trim() === "") {
+    if (nomeOriginal === "") {
         document.getElementById('erro-msg').classList.remove('oculto');
         return;
     }
 
-    // 1. Nome para BUSCAR (minúsculo e sem acento)
-    const nomeBusca = inputNome.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+    const nomeBusca = nomeOriginal.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
-    // 2. Nome para EXIBIR (primeira letra maiúscula)
-    const nomeExibido = capitalizarPrimeiraLetra(inputNome.trim());
-
-    // ====================================================================
-    // BUSCA SEGURA OS DADOS DO SERVIDOR (Serverless Function)
-    // ====================================================================
     try {
-        const urlBusca = `/api/get-message?name=${encodeURIComponent(nomeBusca)}`;
+        const resposta = await fetch(`/api/get-message?name=${encodeURIComponent(nomeBusca)}`);
+        if (!resposta.ok) throw new Error("Erro na busca");
         
-        const resposta = await fetch(urlBusca);
-        
-        if (!resposta.ok) {
-            throw new Error(`Erro de rede ao buscar a mensagem: ${resposta.status}`);
-        }
-        
-        const dados = await resposta.json();
-        const conteudo = dados.data;
-        
-        // NOVIDADE: Pega APENAS o texto da carta.
-        const textoCompleto = conteudo.carta; 
-        
-        // 3. Exibe os textos
-        document.getElementById('titulo-mensagem').innerText = `Feliz Natal, ${nomeExibido}!`;
-        document.getElementById('texto-conteudo-unico').innerText = textoCompleto.trim(); 
+        const json = await resposta.json();
+        const conteudo = json.data;
 
-        // 4. Troca as telas
+        document.getElementById('titulo-mensagem').innerText = `Feliz Natal, ${capitalizarPrimeiraLetra(nomeOriginal)}!`;
+        document.getElementById('texto-conteudo-unico').innerText = conteudo.carta;
+
         document.getElementById('tela-inicial').classList.add('oculto');
         document.getElementById('tela-carta').classList.remove('oculto');
-        
-        // Opcional: Se estiver usando controle de áudio com interação, adicione aqui
-        // alternarAudio(); 
-
-    } catch (error) {
-        console.error("Falha ao carregar a mensagem:", error);
-        alert("Ops! Houve um erro ao buscar a mensagem. Verifique a conexão.");
+    } catch (err) {
+        alert("Erro ao buscar mensagem. Verifique sua internet.");
     }
 }
 
 function voltar() {
     document.getElementById('tela-carta').classList.add('oculto');
     document.getElementById('tela-inicial').classList.remove('oculto');
-    document.getElementById('nome-input').value = ""; 
-    document.getElementById('erro-msg').classList.add('oculto');
+    document.getElementById('nome-input').value = "";
 }
 
 /* ================================================================
-  EFEITO DE NEVE
-  ================================================================
-*/
+  ADICIONAIS: CONTADOR, ESTRELAS E DOWNLOAD
+  ================================================================ */
+
+// 1. Contador Regressivo
+function atualizarContador() {
+    const agora = new Date().getTime();
+    let dataNatal = new Date(`Dec 25, ${new Date().getFullYear()} 00:00:00`).getTime();
+    if (agora > dataNatal) dataNatal = new Date(`Dec 25, ${new Date().getFullYear() + 1} 00:00:00`).getTime();
+
+    const diff = dataNatal - agora;
+    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+    document.getElementById('contador').innerHTML = `Faltam <strong>${d}d ${h}h ${m}m</strong> para o Natal!`;
+}
+setInterval(atualizarContador, 60000);
+atualizarContador();
+
+// 2. Rastro de Estrelas
+document.addEventListener('mousemove', function(e) {
+    const estrela = document.createElement('div');
+    estrela.className = 'rastro-estrela';
+    estrela.style.left = e.pageX + 'px';
+    estrela.style.top = e.pageY + 'px';
+    const tam = Math.random() * 8 + 2 + 'px';
+    estrela.style.width = tam; estrela.style.height = tam;
+    document.body.appendChild(estrela);
+    setTimeout(() => estrela.remove(), 1000);
+});
+
+// 3. Baixar Imagem da Carta
+function baixarCarta() {
+    const area = document.getElementById('area-print');
+    const botoes = document.querySelector('.botoes-acao');
+    botoes.style.visibility = 'hidden'; // Esconde os botões no print
+
+    html2canvas(area, { backgroundColor: "#8b0000", scale: 2 }).then(canvas => {
+        const link = document.createElement('a');
+        link.download = `Natal-Henry.png`;
+        link.href = canvas.toDataURL();
+        link.click();
+        botoes.style.visibility = 'visible';
+    });
+}
+
+// 4. Neve
 function criarNeve() {
     const container = document.getElementById('neve-container');
     const floco = document.createElement('div');
     floco.classList.add('floco');
     floco.style.left = Math.random() * 100 + 'vw';
-    const tamanho = Math.random() * 10 + 5 + 'px';
-    floco.style.width = tamanho;
-    floco.style.height = tamanho;
+    const tam = Math.random() * 8 + 4 + 'px';
+    floco.style.width = tam; floco.style.height = tam;
     floco.style.animationDuration = Math.random() * 3 + 2 + 's';
     container.appendChild(floco);
-    setTimeout(() => { floco.remove(); }, 5000);
+    setTimeout(() => floco.remove(), 5000);
 }
-setInterval(criarNeve, 100);
-
-/* ================================================================
-  CONTROLE DE ÁUDIO (OPCIONAL)
-  Se você incluiu a tag <audio> no HTML
-  ================================================================
-*/
-/*
-let estaMudo = true;
-const audio = document.getElementById('musica-fundo');
-const audioToggle = document.getElementById('audio-toggle');
-
-function alternarAudio() {
-    if (estaMudo) {
-        audio.muted = false;
-        audio.play().catch(error => {
-            console.error("Erro ao tentar tocar: ", error);
-        });
-        audioToggle.textContent = '🔇 Desativar Áudio';
-        estaMudo = false;
-    } else {
-        audio.muted = true;
-        audioToggle.textContent = '🎵 Ativar Áudio';
-        estaMudo = true;
-    }
-}
-*/
+setInterval(criarNeve, 150);
