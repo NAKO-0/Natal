@@ -16,34 +16,42 @@ function capitalizarPrimeiraLetra(string) {
 /* ================================================================
    2. CONTROLE DE ÁUDIO E MODAL
    ================================================================ */
-function fecharModalEIniciar() {
-    const modal = document.getElementById('modal-boas-vindas');
+/* ================================================================
+   CONTROLE ÚNICO DE ÁUDIO (TRAVA TOTAL)
+   ================================================================ */
+let processoIniciado = false;
 
-    // 1. Esconde o aviso
+function fecharModalEIniciar(event) {
+    // Se já iniciou uma vez, sai da função e não faz nada
+    if (processoIniciado) return;
+
+    const modal = document.getElementById('modal-boas-vindas');
+    const musica = document.getElementById('musica-natal');
+
+    // 1. Marcar como iniciado IMEDIATAMENTE
+    processoIniciado = true;
+
+    // 2. Esconder o modal
     if (modal) {
         modal.style.display = 'none';
     }
 
-    // 2. Inicia a música APENAS se ainda não estiver tocando
-    if (musica && !musicaTocando) {
-        musica.currentTime = 4; 
+    // 3. Tocar a música
+    if (musica) {
+        musica.currentTime = 4;
         musica.volume = 0.5;
-        musica.play().then(() => {
-            musicaTocando = true; // Marca que a música já iniciou
-            console.log("Música iniciada!");
-        }).catch(e => console.log("Erro ao iniciar áudio:", e));
+        musica.play().catch(e => console.log("Erro ao tocar:", e));
     }
 
-    // 3. Remove os ouvintes globais para não reiniciar ao clicar na tela
+    // 4. REMOVER OS OUVINTES DA TELA PARA SEMPRE
     document.removeEventListener('click', fecharModalEIniciar);
     document.removeEventListener('touchstart', fecharModalEIniciar);
-
-    atualizarContador();
+    
+    console.log("Sistema de áudio travado para não recomeçar.");
 }
 
-// IMPORTANTE: Esses ouvintes servem apenas como "plano B". 
-// O clique no botão do modal removerá eles.
-document.addEventListener('click', fecharModalEIniciar); 
+// OUVINTES: Eles só vão funcionar UMA VEZ por causa do removeEventListener acima
+document.addEventListener('click', fecharModalEIniciar);
 document.addEventListener('touchstart', fecharModalEIniciar, { passive: true });
 
 /* ================================================================
