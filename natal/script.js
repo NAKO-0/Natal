@@ -84,13 +84,27 @@ document.addEventListener('mousemove', function(e) {
 function baixarCarta() {
     const area = document.getElementById('area-print');
     const botoes = document.querySelector('.botoes-acao');
-    botoes.style.visibility = 'hidden'; // Esconde os botões no print
+    
+    // 1. Esconde os botões para eles não aparecerem na imagem baixada
+    botoes.style.visibility = 'hidden'; 
 
-    html2canvas(area, { backgroundColor: "#8b0000", scale: 2 }).then(canvas => {
+    // 2. Configura o html2canvas
+    html2canvas(area, { 
+        backgroundColor: null, // Permite que o fundo do CSS apareça
+        scale: 3,              // Aumenta a resolução da imagem (fica mais nítida)
+        useCORS: true,         // ESSENCIAL para carregar a imagem de fundo externa
+        logging: false         // Limpa o console de avisos desnecessários
+    }).then(canvas => {
+        // 3. Cria o link de download
         const link = document.createElement('a');
-        link.download = `Natal-Henry.png`;
-        link.href = canvas.toDataURL();
+        link.download = `Natal-Henry-Mensagem.png`;
+        link.href = canvas.toDataURL("image/png");
         link.click();
+        
+        // 4. Devolve a visibilidade aos botões no site
+        botoes.style.visibility = 'visible';
+    }).catch(err => {
+        console.error("Erro ao gerar imagem:", err);
         botoes.style.visibility = 'visible';
     });
 }

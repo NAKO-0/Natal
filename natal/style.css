@@ -336,8 +336,41 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* Estilo específico para o print não sair cortado */
+/* Estilo da área que será transformada em imagem */
 #area-print {
-    padding: 30px;
+    /* Escolha uma imagem de fundo de Natal abaixo */
+    background-image: url(src/fundo.jpg); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px;
     border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Camada de escurecimento para o texto não brigar com a imagem de fundo */
+.conteudo-aba {
+    background: rgba(0, 0, 0, 0.5); /* Fundo preto 50% transparente */
+    padding: 25px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px); /* Efeito de vidro fosco (opcional) */
+}
+
+/* Deixa o texto bonitinho e legível */
+.texto-conteudo {
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    text-align: left;
+    /* Sombra para garantir leitura em qualquer fundo */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); 
+}
+
+#titulo-mensagem {
+    color: gold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+    margin-bottom: 15px;
 }
