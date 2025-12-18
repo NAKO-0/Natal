@@ -7,6 +7,7 @@ const formNome = document.getElementById('form-nome');
 
 // Variável de controle para a música não reiniciar
 let musicaTocando = false;
+let processoIniciado = false; // Trava para o S23
 
 function capitalizarPrimeiraLetra(string) {
     if (!string) return string;
@@ -14,15 +15,10 @@ function capitalizarPrimeiraLetra(string) {
 }
 
 /* ================================================================
-   2. CONTROLE DE ÁUDIO E MODAL
+   2. CONTROLE DE ÁUDIO E MODAL (DESTRAVAR)
    ================================================================ */
-/* ================================================================
-   CONTROLE ÚNICO DE ÁUDIO (TRAVA TOTAL)
-   ================================================================ */
-let processoIniciado = false;
-
-function fecharModalEIniciar(event) {
-    // Se já iniciou uma vez, sai da função e não faz nada
+function fecharModalEIniciar() {
+    // Se já iniciou, não faz nada para não reiniciar o som
     if (processoIniciado) return;
 
     const modal = document.getElementById('modal-boas-vindas');
@@ -31,31 +27,32 @@ function fecharModalEIniciar(event) {
     // 1. Marcar como iniciado IMEDIATAMENTE
     processoIniciado = true;
 
-    // 2. Esconder o modal
+    // 2. Esconde o aviso
     if (modal) {
         modal.style.display = 'none';
     }
 
-    // 3. Tocar a música
+    // 3. Inicia a música (O navegador permite porque houve o clique no OK)
     if (musica) {
-        musica.currentTime = 4;
+        musica.currentTime = 4; // Pula o silêncio
         musica.volume = 0.5;
-        musica.play().catch(e => console.log("Erro ao tocar:", e));
+        musica.play().then(() => {
+            musicaTocando = true;
+            console.log("Música iniciada após clique no OK!");
+        }).catch(e => {
+            console.log("Erro ao iniciar áudio:", e);
+            processoIniciado = false; // Permite tentar de novo se falhar
+        });
     }
 
-    // 4. REMOVER OS OUVINTES DA TELA PARA SEMPRE
-    document.removeEventListener('click', fecharModalEIniciar);
-    document.removeEventListener('touchstart', fecharModalEIniciar);
-    
-    console.log("Sistema de áudio travado para não recomeçar.");
+    // 4. Garante que o contador comece
+    if (typeof atualizarContador === "function") {
+        atualizarContador();
+    }
 }
 
-// OUVINTES: Eles só vão funcionar UMA VEZ por causa do removeEventListener acima
-document.addEventListener('click', fecharModalEIniciar);
-document.addEventListener('touchstart', fecharModalEIniciar, { passive: true });
-
 /* ================================================================
-   3. BUSCA NA API (LIMPO E SEM CONFLITO)
+   3. BUSCA NA API E TROCA DE TELA
    ================================================================ */
 if (formNome) {
     formNome.addEventListener('submit', function(event) {
@@ -67,6 +64,8 @@ if (formNome) {
 async function abrirPresente() {
     const nomeOriginal = inputNome.value.trim();
     
+    // REMOVIDO: Toda a parte de musica.play() daqui para não dar conflito
+
     if (nomeOriginal === "") {
         const erroMsg = document.getElementById('erro-msg');
         if (erroMsg) erroMsg.classList.remove('oculto');
@@ -81,21 +80,30 @@ async function abrirPresente() {
         const dados = await resposta.json();
         
         if (dados.data) {
+            const conteudo = dados.data;
             document.getElementById('titulo-mensagem').innerText = `Feliz Natal, ${nomeExibido}!`;
-            document.getElementById('texto-conteudo-unico').innerText = dados.data.carta.trim();
+            document.getElementById('texto-conteudo-unico').innerText = conteudo.carta.trim();
 
             document.getElementById('tela-inicial').classList.add('oculto');
             document.getElementById('tela-carta').classList.remove('oculto');
         } else {
             alert("Nome não encontrado!");
         }
+
     } catch (err) {
         console.error("Erro na busca:", err);
+        alert("Ops! Algo deu errado ao buscar sua carta.");
     }
 }
 
+function voltar() {
+    document.getElementById('tela-carta').classList.add('oculto');
+    document.getElementById('tela-inicial').classList.remove('oculto');
+    inputNome.value = "";
+}
+
 /* ================================================================
-   4. UTILITÁRIOS (CONTADOR E EFEITOS)
+   4. EFEITOS VISUAIS (NEVE E ESTRELAS)
    ================================================================ */
 function atualizarContador() {
     const el = document.getElementById('contador');
@@ -111,12 +119,14 @@ function atualizarContador() {
 setInterval(atualizarContador, 60000);
 atualizarContador();
 
-// Estrelas e Neve permanecem iguais...
 document.addEventListener('mousemove', function(e) {
     const estrela = document.createElement('div');
     estrela.className = 'rastro-estrela';
     estrela.style.left = e.pageX + 'px';
     estrela.style.top = e.pageY + 'px';
+    const tamanho = Math.random() * 8 + 2 + 'px';
+    estrela.style.width = tamanho;
+    estrela.style.height = tamanho;
     document.body.appendChild(estrela);
     setTimeout(() => { estrela.remove(); }, 1000);
 });
@@ -137,13 +147,11 @@ function criarNeve() {
     const floco = document.createElement('div');
     floco.classList.add('floco');
     floco.style.left = Math.random() * 100 + 'vw';
+    const tamanho = Math.random() * 10 + 5 + 'px';
+    floco.style.width = tamanho;
+    floco.style.height = tamanho;
+    floco.style.animationDuration = Math.random() * 3 + 2 + 's';
     container.appendChild(floco);
     setTimeout(() => { floco.remove(); }, 5000);
 }
 setInterval(criarNeve, 150);
-
-function voltar() {
-    document.getElementById('tela-carta').classList.add('oculto');
-    document.getElementById('tela-inicial').classList.remove('oculto');
-    inputNome.value = "";
-}
