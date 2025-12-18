@@ -354,3 +354,72 @@ html, body {
     padding: 0;
     overflow-x: hidden; 
 }
+
+/* =========================================
+   Ajustes de Container e Texto (Geral)
+========================================= */
+.container {
+    width: 90%; /* Ocupa 90% da largura em telas pequenas */
+    max-width: 500px; /* Não passa de 500px em telas grandes */
+    margin: 20px;
+    padding: 2rem; /* Usar rem ajuda na escala */
+    box-sizing: border-box; /* Garante que o padding não "estoure" a largura */
+}
+
+/* Ajuste das fontes para serem flexíveis */
+h1 {
+    font-size: clamp(2rem, 8vw, 3.5rem); /* Tamanho varia entre 2rem e 3.5rem conforme a tela */
+    word-wrap: break-word;
+}
+
+p {
+    font-size: clamp(0.9rem, 4vw, 1.1rem);
+}
+
+/* =========================================
+   Media Query para iPhone SE e Telas Pequenas
+========================================= */
+@media (max-width: 375px) {
+    .container {
+        padding: 1.2rem;
+        border-radius: 20px;
+    }
+
+    h1 {
+        margin-bottom: 0.5rem;
+    }
+
+    /* Ajusta o campo de entrada para não ficar apertado */
+    input {
+        width: 100%; 
+        font-size: 16px; /* Evita que o iOS dê zoom automático ao focar */
+        padding: 12px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    /* Ajuste da área da mensagem para caber no visor pequeno */
+    .conteudo-aba {
+        max-height: 280px; 
+        padding: 15px;
+    }
+
+    .texto-conteudo {
+        font-size: 1rem;
+    }
+
+    .contador-natal {
+        font-size: 0.85rem;
+        padding: 4px 10px;
+    }
+}
+
+/* Garante que nada escape para os lados (barra de rolagem horizontal) */
+html, body {
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+}
