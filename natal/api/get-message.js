@@ -368,6 +368,23 @@ Henry
 Deus te abençoe. 🎄✨`
     },
 
+     "teresinha": {
+        poema: "",
+        carta: `Teresinha
+Minha tia do coração. Você esteve comigo a vida toda, e isso é algo que eu nunca vou esquecer. Lembro com muito carinho de quando a gente ficava conversando, brincando e jogando conversa fora, sem pressa nenhuma. Eram momentos simples, mas que hoje fazem muita falta. Tenho muita saudade dessa época.
+
+Você sempre teve um jeito leve e acolhedor, que fazia tudo ficar mais tranquilo. Estar com você era confortável, era bom, e essas lembranças continuam vivas em mim. Mesmo com o tempo passando, o carinho e a gratidão que sinto por você continuam os mesmos.
+
+Quero que saiba o quanto você é importante pra mim e o quanto essas memórias significam. Elas fazem parte de quem eu sou hoje e ocupam um lugar especial no meu coração.
+
+Te desejo um Natal cheio de paz, amor e tranquilidade. Que o próximo ano venha com saúde, bons momentos e muitas coisas boas. Obrigado por tudo, por cada momento, cada conversa e cada lembrança.
+
+Com todo o meu carinho
+Henry
+
+Deus te abençoe. 🎄💙`
+    },
+
     // MENSAGEM PADRÃO (Sempre a última para ser usada se o nome não for encontrado)
     "padrao": {
         poema: "O Natal chegou com alegria,\nTrazendo paz e harmonia,\nQue seu dia seja magia,\nCheio de luz e fantasia.",
