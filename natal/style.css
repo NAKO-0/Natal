@@ -49,11 +49,17 @@ body {
     border: 2px solid rgba(255, 255, 255, 0.1); /* Borda sutil de vidro */
 }
 
+/* Registro da fonte nova - Certifique-se que o arquivo está na mesma pasta que este CSS */
+@font-face {
+    font-family: 'Snow For Santa';
+    src: url('Snow for Santa_PersonalUseOnly.ttf');
+}
+
 /* =========================================
-   Tipografia Mágica
+    Tipografia Mágica
 ========================================= */
-   h1, h2, h3 {
-    font-family: 'Mountains of Christmas', cursive;
+h1, h2, h3 {
+    font-family: 'Snow For Santa', cursive;
     color: #772d25; /* Vermelho Natal */
     
     /* REMOVEMOS O ANTIGO text-shadow E COLOCAMOS UM NOVO, MAIS FORTE */
