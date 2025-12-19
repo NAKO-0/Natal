@@ -318,6 +318,56 @@ Henry
 Deus te abençoe. 🎄🎮`
     },
 
+     "israel": {
+        poema: "",
+        carta: `Israel
+
+Quero te agradecer por ser esse amigo firme e gente boa. Você é daquelas pessoas que chegam sem fazer barulho, mas acabam fazendo diferença de verdade. A convivência, as conversas e os momentos juntos mostraram o quanto você é alguém em quem dá pra confiar.
+
+Entre risadas, papos aleatórios e conversas mais sérias, deu pra perceber que você é um cara parceiro, que soma e que está junto quando precisa. Isso hoje em dia é raro, e eu valorizo muito. Amizade boa é assim: sem esforço, sem drama, só presença real.
+
+Te desejo um Natal tranquilo, com paz, descanso e boas risadas. Que o próximo ano venha com crescimento, conquistas e muitas coisas boas no caminho. Que você continue sendo esse cara firme, verdadeiro e do bem.
+
+Obrigado pela amizade.
+Henry
+
+Deus te abençoe. 🎄✨`
+    },
+
+     "jhonw": {
+        poema: "",
+        carta: `Jhonw
+
+Meu mano… você é facilmente uma das pessoas mais loucas que eu conheço — e isso não é nem um pouco negativo. Na real, é exatamente isso que te torna único. Sempre com umas ideias fora da caixinha, umas falas aleatórias e um jeito completamente imprevisível que rende boas risadas.
+
+Mesmo na loucura, dá pra ver que você é gente boa de verdade. A convivência, as conversas e os momentos juntos mostram que, por trás da zoeira, tem alguém parceiro, leal e que soma. E amizade boa é isso: rir muito, falar besteira e saber que dá pra contar quando precisa.
+
+Que esse Natal seja tranquilo, com risadas e boas energias. E que o próximo ano venha com saúde, histórias novas pra contar e, claro, mais momentos insanos pra gente rir depois.
+
+Valeu por tudo, meu mano. Continua sendo esse doido do bem que você é.
+
+Tamo junto
+Henry
+
+Deus te abençoe. 🎄😄`
+    },
+
+     "miquéias": {
+        poema: "",
+        carta: `Miquéias
+
+Meu nobre, a gente se conhece há pouco tempo, mas deu pra perceber rápido que você é fera. Conversar com você é uma das coisas mais tranquilas que tem, daquelas conversas leves que fluem sem esforço.
+
+Dá pra ver claramente o quanto você se dedica e se esforça pelas pessoas de quem gosta, e isso é algo que eu admiro muito em você. Hoje em dia não é qualquer um que demonstra esse tipo de cuidado e lealdade.
+
+É uma honra te ter como amigo. Que esse Natal seja tranquilo e que o próximo ano venha com crescimento, conquistas e muitas coisas boas. Que a gente continue fortalecendo essa amizade.
+
+Tamo junto
+Henry
+
+Deus te abençoe. 🎄✨`
+    },
+
     // MENSAGEM PADRÃO (Sempre a última para ser usada se o nome não for encontrado)
     "padrao": {
         poema: "O Natal chegou com alegria,\nTrazendo paz e harmonia,\nQue seu dia seja magia,\nCheio de luz e fantasia.",
