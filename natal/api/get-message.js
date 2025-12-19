@@ -368,9 +368,9 @@ Henry
 Deus te abençoe. 🎄✨`
     },
 
-     "teresinha": {
+     "tete": {
         poema: "",
-        carta: `Teresinha
+        carta: `Tete
 Minha tia do coração. Você esteve comigo a vida toda, e isso é algo que eu nunca vou esquecer. Lembro com muito carinho de quando a gente ficava conversando, brincando e jogando conversa fora, sem pressa nenhuma. Eram momentos simples, mas que hoje fazem muita falta. Tenho muita saudade dessa época.
 
 Você sempre teve um jeito leve e acolhedor, que fazia tudo ficar mais tranquilo. Estar com você era confortável, era bom, e essas lembranças continuam vivas em mim. Mesmo com o tempo passando, o carinho e a gratidão que sinto por você continuam os mesmos.
