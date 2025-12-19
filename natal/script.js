@@ -40,7 +40,7 @@ function fecharModalEIniciar() {
     // 3. Inicia a música (O navegador permite porque houve o clique no OK)
     if (musica) {
         musica.currentTime = 4; // Pula o silêncio
-        musica.volume = 0.5;
+        musica.volume = 0.3;
         musica.play().then(() => {
             musicaTocando = true;
             console.log("Música iniciada após clique no OK!");
@@ -111,7 +111,7 @@ function voltar() {
 function enviarNotificacaoNatal() {
     if ("Notification" in window && Notification.permission === "granted") {
         new Notification("🎄 Feliz Natal!", {
-            body: "Ho Ho Ho! A contagem zerou! Venha ver sua mensagem.",
+            body: "Feliz Natal! Que esse dia seja muito abençoado. Abraço!",
             icon: "src/fundo.jpg" 
         });
     }

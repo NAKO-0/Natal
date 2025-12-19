@@ -44,7 +44,7 @@ Tenho orgulho de te chamar de um dos meus melhores amigos, mesmo quando você pa
 
 Quero te desejar um Feliz Natal, cheio de coisa boa. Que o próximo ano seja incrível pra você, com felicidade, risadas, conquistas e menos agarrões aleatórios. Que Deus abençoe sua vida e tudo o que ainda está por vir.
 
-Valeu por tudo, Dudu. 🎄✨
+Valeu por tudo, Dudu. 🎄
 Feliz Natal. Deus te abençoe.`
     },
     
@@ -60,7 +60,7 @@ Quero te desejar um Natal cheio de paz, amor e descanso, daqueles que recarregam
 
 Nunca se esqueça do quanto você é importante, do bem que você espalha por onde passa e da diferença que faz na vida das pessoas que têm a sorte de te conhecer. A sua amizade é valiosa, e eu quero que saiba o quanto sou grato por ter você por perto, por tudo que compartilha e pelo jeito único de ser.
 
-Com carinho,
+Com carinho
 Henry
 
 Deus te abençoe. 🎄✨`
@@ -70,121 +70,151 @@ Deus te abençoe. 🎄✨`
         poema: "O Natal chegou com alegria,\nTrazendo paz e harmonia,\nQue seu dia seja magia,\nCheio de luz e fantasia.",
         carta: `Daniel
 
-Quero te agradecer por ser um grande amigo. Mesmo com as piadas de humor duvidoso — que eu confesso que sempre acabo rindo porque sou besta — você esteve presente de verdade, trazendo leveza e fazendo os momentos ficarem mais fáceis.
+Quero te agradecer de verdade por ser um grande amigo. Mesmo com as piadas de humor duvidoso — que eu confesso que quase sempre acabo rindo porque sou besta mesmo — você esteve presente de verdade, trazendo leveza e fazendo os momentos ficarem mais fáceis, até nos dias mais cansativos ou complicados.
 
-Por trás das brincadeiras, tem alguém que sabe ser amigo, que está junto, que soma e que faz diferença. Isso é algo que eu valorizo muito e que não passa despercebido.
+Por trás de toda a zoeira e das brincadeiras, existe alguém que sabe ser amigo de verdade. Alguém que está junto, que soma, que apoia e que faz diferença. Isso é algo que eu valorizo muito e que nunca passa despercebido. Ter você por perto deixa tudo mais leve, mais engraçado e mais fácil de encarar.
 
-Te desejo um Natal cheio de paz, risadas e boas energias, e que o próximo ano venha com muitas conquistas, momentos bons e mais histórias pra gente rir depois. Obrigado por tudo, irmão.
+Esse ano rendeu muitas risadas, histórias pra contar e momentos que com certeza vão ficar na memória. São essas coisas simples, cheias de piadas aleatórias e conversas sem sentido, que acabam se tornando as melhores lembranças. E grande parte disso só aconteceu porque você estava lá.
 
-Lembre-se: Por trás das brincadeiras, você é um amigo de verdade. Nunca duvide do quanto você é importante.
+Te desejo um Natal cheio de paz, risadas sinceras e boas energias. Que o próximo ano venha com muitas conquistas, momentos bons, aprendizados e ainda mais histórias pra gente rir depois. Obrigado por tudo, irmão, pela parceria, pela amizade e por estar presente.
+
+Nunca se esqueça: por trás das brincadeiras, você é um amigo de verdade. Não duvide do quanto você é importante e do quanto a sua amizade faz diferença.
 
 Com carinho
-Henry`
+Henry
+
+Deus te abençoe. 🎄`
     },
 
     "julia": {
         poema: "O Natal chegou com alegria,\nTrazendo paz e harmonia,\nQue seu dia seja magia,\nCheio de luz e fantasia.",
         carta: `Julia
 
-Quero te agradecer por ser uma amiga tão divertida e especial. Seu jeito leve e espontâneo sempre trouxe risadas, mas também trouxe algo muito valioso: conselhos duros quando precisavam ser ditos, sempre verdadeiros e necessários.
+Quero te agradecer de verdade por ser uma amiga tão divertida e especial. Seu jeito leve, espontâneo e verdadeiro sempre trouxe risadas e momentos bons, mas também trouxe algo ainda mais valioso: conselhos sinceros, diretos e, muitas vezes, duros — ditos exatamente quando precisavam ser ditos.
 
-Mesmo quando não foi fácil ouvir, seus conselhos fizeram diferença e mostraram o quanto você se importa de verdade. Isso é algo raro e que eu valorizo muito.
+Mesmo quando não foi fácil ouvir, seus conselhos fizeram diferença e me ajudaram a refletir, crescer e enxergar situações de outra forma. Isso mostra o quanto você se importa de verdade, porque nem todo mundo tem coragem de falar a verdade quando sabe que pode incomodar. Você faz isso com honestidade e intenção boa, e isso é algo raro.
 
-Te desejo um Natal cheio de paz, alegria e momentos bons, e que o próximo ano venha com muitas conquistas, crescimento e felicidade. Obrigado por tudo e por ser essa amiga tão sincera.
+A sua amizade é especial justamente por isso: você sabe ser leve, mas também sabe ser firme quando precisa. Sabe brincar, mas também sabe apoiar e orientar. Ter alguém assim por perto faz toda a diferença, e eu valorizo muito isso.
 
-Lembre-se: Nem todo mundo tem coragem de ser verdadeiro como você. Continue sendo essa pessoa sincera e especial.
+Te desejo um Natal cheio de paz, alegria e momentos bons, daqueles que renovam as energias. Que o próximo ano venha com muitas conquistas, crescimento, aprendizados e felicidade. Obrigado por tudo e por ser essa amiga tão sincera e presente.
+
+Nunca se esqueça: nem todo mundo tem coragem de ser verdadeiro como você. Continue sendo essa pessoa sincera, forte e especial.
 
 Com carinho
-Henry`
+Henry
+
+Deus te abençoe. 🎄✨`
     },
 
     "alexia": {
         poema: "O Natal chegou com alegria,\nTrazendo paz e harmonia,\nQue seu dia seja magia,\nCheio de luz e fantasia.",
         carta: `Alexia
 
-Você foi, sem dúvidas, uma das melhores pessoas que eu conheci. Em momentos em que eu realmente precisei, você me deu conselhos sinceros e bons de verdade, daqueles que fazem a gente parar e pensar.
+Honestamente, você foi uma das amizades mais inesperadas que eu tive este ano. A forma como começamos a nos falar foi algo totalmente fora do previsto, mas, ainda assim, você se tornou uma das pessoas em quem eu mais sei que posso contar.
 
-Sei que posso contar com você quando precisar, e espero de coração que você também saiba que pode contar comigo. Nossa amizade é algo que eu valorizo muito, pela confiança, pelas conversas e pelo apoio mútuo.
+Mesmo eu te enchendo a paciência às vezes, posso dizer com tranquilidade que confio muito em você. Com o tempo, você acabou se tornando como uma irmã para mim. Talvez esse sentimento não seja totalmente recíproco, e tudo bem — isso não diminui em nada o carinho e o respeito que tenho por você.
 
-Te desejo um Natal cheio de paz, carinho e boas energias, e que o próximo ano venha com coisas boas, crescimento e momentos felizes. Obrigado por tudo.
+Você realmente me dá bons conselhos, sabe ouvir e é uma amiga incrível. Sua presença, sua sinceridade e sua forma de enxergar as coisas fizeram diferença na minha vida, e eu sou muito grato por isso.
 
-Lembre-se: você é uma pessoa incrível e especial.
+Espero que você tenha um Natal tranquilo e um próximo ano ainda melhor, com paz, crescimento e coisas boas. E espero, de verdade, que continuemos amigos, porque você é uma pessoa muito especial e querida.
 
-Com carinho
-Henry`
+Obrigado por tudo.
+Um abraço
+Henry 🎄✨`
     },
 
     "mayra": {
         poema: "O Natal chegou com alegria,\nTrazendo paz e harmonia,\nQue seu dia seja magia,\nCheio de luz e fantasia.",
         carta: `Mãe
 
-Quero aproveitar este Natal para te dizer algo que muitas vezes não consigo colocar em palavras. Você é uma das pessoas que eu mais amo na vida. Seu amor, cuidado e força sempre foram minha base, mesmo quando eu não soube demonstrar isso direito.
+Você é uma das pessoas mais especiais da minha vida. Já fazem 18 anos que caminhamos juntos, passando por momentos bons e ruins, fases leves e outras bem complicadas. Sei que eu já aguentei algumas fases difíceis suas, assim como você aguenta algumas das minhas até hoje — e isso faz parte da vida, do crescimento e do amor entre mãe e filho.
 
-Também quero te pedir desculpa pelas burradas que eu faço, pelas vezes em que erro, sou impulsivo ou acabo te preocupando. Saiba que nunca é por falta de amor ou respeito. Estou aprendendo, crescendo e tentando ser alguém melhor todos os dias — e você faz parte disso.
+Eu quero aproveitar este Natal para te dizer algo que muitas vezes não consigo colocar em palavras. Você é uma das pessoas que eu mais amo na vida. Seu amor, seu cuidado e sua força sempre foram minha base, mesmo quando eu não soube demonstrar isso do jeito certo.
 
-Obrigado por tudo o que você faz por mim, pelos conselhos, pela paciência e por nunca soltar minha mão. Tudo o que eu sou e tudo o que estou me tornando tem muito de você.
+Nós já tivemos brigas e discussões, e sei que ainda vamos ter. Mas nada disso muda o que eu sinto por você. Mesmo quando você diz que eu não te respeito, quero que saiba que nunca é minha intenção te fazer se sentir assim. Se isso acontece, não é por falta de amor — muito pelo contrário. Eu te amo de verdade, mesmo quando discordamos.
 
-Te desejo um Natal cheio de paz, amor e momentos felizes. Que o próximo ano venha com saúde, alegria e muitas bênçãos. Eu te amo.
+Também quero te pedir desculpa pelas burradas que eu faço, pelas vezes em que erro, sou impulsivo ou acabo te preocupando. Saiba que isso nunca é por falta de amor ou respeito. Estou aprendendo, crescendo e tentando ser alguém melhor todos os dias — e você faz parte disso. Tudo o que eu sou e tudo o que estou me tornando tem muito de você.
+
+Às vezes discordamos de algumas situações, como aconteceu recentemente. Não pela sua preocupação — porque eu sei que você se preocupa comigo e sei que eu estava errado em não avisar —, mas pela reação, que acabou sendo um pouco exagerada. Ainda assim, quero que você saiba que fico feliz por saber que você se importa. Porque, sendo sincero, eu não sei o que faria sem você.
+
+Você é minha mãe, minha companheira e minha amiga. Obrigado por tudo o que você faz por mim, pelos conselhos, pela paciência e por nunca soltar minha mão. Eu sempre vou te amar, sempre vou tentar te entender e enxergar o seu lado, mesmo quando for difícil. Eu realmente tento.
+
+Te desejo um Natal cheio de paz, amor e momentos felizes. Que o próximo ano venha com saúde, alegria e muitas bênçãos. Quero que você saiba, acima de tudo, que eu te amo — hoje, amanhã e sempre.
 
 Com todo o meu amor
-Henry`
+Henry ❤️🎄`
     },
 
     "neide": {
         poema:"",
         carta:`Vó
 
-Quero aproveitar este Natal para te agradecer por tudo o que você faz por mim. Você sempre me ajuda nas coisas que eu faço, mesmo quando eu sou um pouco rebelde. Seu apoio, sua paciência e seu cuidado significam muito mais do que eu consigo explicar.
+Quero aproveitar este Natal para te agradecer por tudo o que você faz por mim e por tudo o que você representa na minha vida. Desde sempre, você esteve ao meu lado, me ajudando, cuidando de mim e me apoiando, mesmo quando eu fui teimoso, rebelde ou difícil de lidar. Sua paciência e seu amor nunca faltaram, e isso é algo que eu vou levar comigo para sempre.
 
-Ter você na minha vida é uma bênção. Seu carinho, seus conselhos e a forma como você sempre está presente me dão força e segurança. Sou muito grato por tudo o que você representa pra mim.
+Ter você na minha vida é uma verdadeira bênção. Seu carinho, seus conselhos e a forma como você sempre se faz presente me dão força, segurança e conforto. Muitas vezes, só de estar perto de você, tudo fica mais calmo e mais fácil. Você tem um jeito único de acolher, de cuidar e de demonstrar amor, e isso faz toda a diferença para mim.
 
-Te desejo um Natal cheio de paz, amor e saúde, e que o próximo ano venha com muitos momentos felizes. Obrigado por tudo. Eu te amo.
+Sou muito grato por cada conselho, cada gesto de cuidado, cada preocupação e cada momento que passamos juntos. Você é um exemplo de amor, dedicação e bondade, e tudo isso se reflete na pessoa que estou me tornando. Muito do que eu sou hoje tem um pouco de você.
+
+Te desejo um Natal cheio de paz, amor, saúde e tranquilidade. Que o próximo ano venha com muitos momentos felizes, boas notícias e motivos para sorrir. Que você continue sendo essa pessoa tão especial, que ilumina a vida de todos ao seu redor.
+
+Obrigado por tudo, por cada detalhe, cada ensinamento e cada demonstração de carinho. Eu te amo muito.
 
 Com todo o meu carinho
-Henry`
+Henry 🎄💙
+
+Deus te abençoe.`
     },
 
     "juliana": {
         poema:"",
         carta:`Tia
 
-Quero aproveitar este Natal pra te dizer o quanto você é importante pra mim. Você é minha tia e minha madrinha de nascimento, alguém que sempre esteve presente na minha vida, mesmo quando você fica chata de vez em quando — o que não muda em nada o quanto eu te amo.
+Quero aproveitar este Natal para te dizer, com todo carinho, o quanto você é importante pra mim. Além de ser minha tia, você é minha madrinha de nascimento e sempre teve um lugar especial na minha vida. Desde cedo, sua presença, seu cuidado e sua atenção fizeram diferença, mesmo nos momentos mais simples.
 
-Seu cuidado, seus conselhos e sua presença sempre fizeram diferença. Sei que posso contar com você, e isso é algo que eu valorizo muito.
+Mesmo quando você fica chata de vez em quando — o que não muda em nada o quanto eu te amo —, sei que tudo vem da preocupação, do cuidado e do carinho que você sempre teve por mim. Isso é algo que eu reconheço e valorizo muito.
 
-Te desejo um Natal cheio de paz, alegria e momentos bons, e que o próximo ano venha com saúde, felicidade e muitas bênçãos. Obrigado por tudo e por sempre estar por perto.
+Seus conselhos, seu jeito de cuidar e a forma como você sempre está por perto mostram o quanto você se importa. Saber que posso contar com você me traz segurança e conforto, e isso é algo muito importante pra mim.
 
-Com carinho,
-Henry`
+Te desejo um Natal cheio de paz, alegria e momentos bons, daqueles que aquecem o coração. Que o próximo ano venha com saúde, felicidade e muitas bênçãos. Obrigado por tudo, por cada gesto de cuidado e por nunca deixar de estar presente.
+
+Com carinho
+Henry
+
+Deus te abençoe. 🎄✨`
     },
 
     "luiz": {
         poema:"",
         carta:`Luiz
 
-Quero aproveitar este Natal para te agradecer de verdade pelos conselhos valiosos que você já me deu. Mesmo que muitas vezes não pareça, eu sei que você se importa, e isso significa muito pra mim.
+Quero aproveitar este Natal para te agradecer de forma sincera por todos os conselhos valiosos que você já me deu ao longo do tempo. Mesmo que, muitas vezes, eu não demonstre ou que não pareça, eu sei que você se importa — e isso tem um peso enorme pra mim. Seu jeito, às vezes mais direto e silencioso, diz muito mais do que palavras, e eu reconheço isso.
 
-Suas palavras e atitudes me ajudaram a refletir, a crescer e a enxergar as coisas de outra forma. Sou grato por tudo o que você já fez e faz por mim, mesmo nos detalhes e nos momentos mais silenciosos.
+Suas atitudes e suas palavras me ajudaram a refletir, a amadurecer e a enxergar muitas situações de outra forma. Em vários momentos, seus conselhos vieram na hora certa, me fazendo pensar melhor antes de agir e entender que crescer também significa ouvir, aprender e aceitar diferentes pontos de vista.
 
-Te desejo um Natal cheio de paz e um próximo ano com saúde, tranquilidade e coisas boas. Muito obrigado por tudo.
+Sou muito grato por tudo o que você já fez e continua fazendo por mim, inclusive nos detalhes que nem sempre são percebidos, mas que fazem toda a diferença. Sei que muitas das suas preocupações, orientações e até dos seus silêncios vêm do cuidado e do desejo de ver o melhor para mim.
 
-Com respeito e carinho
-Henry`
+Te desejo um Natal cheio de paz, tranquilidade e bons momentos. Que o próximo ano venha com saúde, equilíbrio e muitas coisas boas. Obrigado por tudo, pelos ensinamentos, pela presença e por tudo o que contribui para a pessoa que estou me tornando.
+
+Com respeito e carinho,
+Henry
+
+Deus te abençoe. 🎄✨`
     },
 
 
     "higor": {
         poema: "",
-        carta: `
-Higor,
+        carta: `Higor
+        Quero te agradecer por ser esse amigo tão especial. Sua presença sempre deixou tudo mais leve, rendeu boas risadas e momentos simples que acabaram fazendo muita diferença no meu dia a dia.
 
-Quero te agradecer por ser esse amigo tão especial. Sua presença sempre trouxe leveza, risadas e momentos bons que fizeram diferença no meu dia a dia.
+Nossa amizade é tranquila, sincera e verdadeira, sem esforço. E isso é algo que eu valorizo demais, porque não precisa de exagero pra ser bom, só de estar junto e contar um com o outro.
 
-Nossa amizade é simples, sincera e verdadeira, e isso é algo que eu valorizo muito. Te desejo um Natal tranquilo e um próximo ano cheio de conquistas e felicidade.
+Te desejo um Natal tranquilo e um próximo ano cheio de coisas boas, conquistas e momentos que valham a pena. Obrigado pela amizade e por estar por perto.
 
 Com carinho,
 Henry
-`
+
+Deus te abençoe.`
     },
 
     "alexandre": {
@@ -267,8 +297,25 @@ Obrigado pela amizade e pelos momentos compartilhados. Seu jeito de ser e sua at
 Te desejo um Natal cheio de luz e um ano novo com felicidade e sonhos se realizando.
 
 Com carinho,
+Henry`
+    },
+
+    "samuel": {
+        poema: "",
+        carta: `Samuel
+
+Meu irmão adotado. Honestamente, a amizade mais rápida que eu fiz esse ano — foram literalmente uns dois minutos entre eu chegar e a gente já virar amigo, como se fosse algo combinado antes.
+
+Você é uma das pessoas mais gente boa que eu conheço, de verdade. A gente teve altos papos, risadas, conversas nada a ver e outras mais sérias também. Em pouco tempo, você virou literalmente um irmão pra mim, daqueles que a gente escolhe.
+
+Tenho certeza de que você ainda vai evoluir muito na vida, e espero poder acompanhar tudo isso como seu amigo, estando por perto e ajudando no que for possível. Sempre que precisar conversar, reclamar da vida, dar risada ou só ficar em silêncio jogando alguma coisa, eu tô aí. Sem pressão, sem drama.
+
+Valeu por tudo, irmão. Que esse Natal seja daora e que o próximo ano venha com muita coisa boa, evolução e mais momentos pra gente rir depois.
+
+Tamo junto sempre.
 Henry
-`
+
+Deus te abençoe. 🎄🎮`
     },
 
     // MENSAGEM PADRÃO (Sempre a última para ser usada se o nome não for encontrado)
